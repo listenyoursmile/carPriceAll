@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>carPriceAll</name>
+=======
 	<name>carPriceAll1</name>
+>>>>>>> branch 'master' of https://github.com/listenyoursmile/carPriceAll.git
 	<comment></comment>
 	<projects>
 	</projects>
