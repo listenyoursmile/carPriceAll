@@ -14,10 +14,16 @@ import FindCar from './components/FindCar'
 import HelpCar from './components/HelpCar'
 import MyCar from './components/MyCar'
 
+
+//import iconFont from './iconfont/iconfont'
+require('./assets/iconfont/iconfont.css')
+
 import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
+
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
+
 
 const routes = [{
 	path:'/',
@@ -58,7 +64,6 @@ const routes = [{
 			component:MyCar
 		}]
 	}]
-
 }]
 
 const router = new VueRouter({

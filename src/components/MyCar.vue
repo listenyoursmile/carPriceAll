@@ -1,6 +1,8 @@
 <template>
-	<p>我的车页</p>
-
+	<div>
+		<p>我的车页</p>
+		<i class="iconfont icon-search"></i>
+	</div>
 	
 </template>
 

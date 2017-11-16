@@ -1,6 +1,6 @@
-<template>
-		<!--<div><router-link :to="/Detail"></router-link></div>-->
+t<template>
 	<div>
+<!--		<div><router-link :to="/Detail"></router-link></div>-->
 		<tabbar style="position: fixed">
 	      <tabbar-item selected link="/">
 	        <img slot="icon" src="../assets/images/footer-1.png">
