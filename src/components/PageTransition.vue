@@ -16,6 +16,7 @@
     },
     methods:{
     	getChild(msg){
+    		console.log(msg)
     		this.$emit("to-parent",msg)
     	}
     },

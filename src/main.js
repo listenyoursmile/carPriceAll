@@ -6,10 +6,14 @@ import VueRouter from 'vue-router'
 import App from './App'
 import Info from './components/Info'
 import Detail from './components/Detail'
+
+//五个主页面路由
+import NewCar from './components/NewCar'
 import SecondCar from './components/SecondCar'
 import FindCar from './components/FindCar'
 import HelpCar from './components/HelpCar'
 import MyCar from './components/MyCar'
+
 import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
 Vue.use(AjaxPlugin)
@@ -19,30 +23,42 @@ const routes = [{
 	path:'/',
 	name:'PageTransition',
 	component:PageTransition,
-	children:[{
+	children:[
+	{
 		path: '',
-  	component: Info
-	},{
-		path: '/Detail/:goodsID',
-		name:'Detail',
-	  component: Detail
-	},{
-		path: '/SecondCar',
-		name: 'SecondCar',
-		component:SecondCar
-	},{
-		path: '/FindCar',
-		name: 'FindCar',
-		component:FindCar
-	},{
-		path: '/HelpCar',
-		name: 'HelpCar',
-		component:HelpCar
-	},{
-		path: '/MyCar',
-		name: 'MyCar',
-		component:MyCar
+  		component: Info,
+		children:[
+		{
+			path: '',
+			name:'NewCar',
+		  	component: NewCar
+		  	
+		},{
+			path: '/Detail/:goodsID',
+			name:'Detail',
+		  	component: Detail
+		  	
+		},{
+			path: '/SecondCar',
+			name: 'SecondCar',
+			component:SecondCar
+			
+		},{
+			path: '/FindCar',
+			name: 'FindCar',
+			component:FindCar
+			
+		},{
+			path: '/HelpCar',
+			name: 'HelpCar',
+			component:HelpCar
+		},{
+			path: '/MyCar',
+			name: 'MyCar',
+			component:MyCar
+		}]
 	}]
+
 }]
 
 const router = new VueRouter({
