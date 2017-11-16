@@ -46,6 +46,11 @@ let webpackConfig = {
         options: vueLoaderConfig
       },
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+        include: []
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]

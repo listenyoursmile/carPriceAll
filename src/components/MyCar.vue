@@ -1,9 +1,14 @@
 <template>
+<<<<<<< HEAD
 <div>
 	<!--<p @click="goSet">我的车页</p>-->
 <!--<router-link to="/MyCar/MyCarset">跳转</router-link>-->
 	<div class="carimg"><img src="../assets/images/mycar/1.jpg"/></div>
 </div>	
+	<div>
+		<p>我的车页</p>
+		<i class="iconfont icon-search"></i>
+	</div>
 </template>
 
 <script>
