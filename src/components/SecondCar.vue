@@ -23,12 +23,18 @@
 			<li><i>排序</i><span class="iconfont icon-xialajiantouxiangxia"></span></li>
 		</ul>
 		<ul class="second_list">
-			<!--<li v-for="data in datalist">
-				<img src="" alt="" />
+			<li v-for="data in datalist">
+				<img :src='data.imgLogo' />
 				<div>
-					<h3></h3>
+					<h3>{{data.serieName}}</h3>
+					<div>
+						<div>
+							<p><em></em> | <b></b></p>
+							<h4>{{data.priceScope}}</h4>
+						</div>
+					</div>
 				</div>
-			</li>-->
+			</li>
 		</ul>
 	</div>
 </template>
@@ -37,6 +43,11 @@
 	import { XHeader } from 'vux'
 	export default{
 		name:'SecondCar',
+		data(){
+			return {
+				datalist:[]
+			}
+		},
 		mounted(){
 			this.$http({
 				method:"get",
@@ -47,8 +58,8 @@
 					brandName:'宝马'
 				}
 			}).then((data)=>{
-				console.log(data)
-				console.log(data.ret_code)
+				this.datalist = data.data.showapi_res_body.data; 
+				console.log(data.data.showapi_res_body.data)
 			})
 		}
 	}
