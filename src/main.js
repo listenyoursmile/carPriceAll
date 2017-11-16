@@ -18,6 +18,10 @@ import MyCar from './components/MyCar'
 
 //我的页面路由的接入
 import MyCarset from './components/MyCarye/MyCarset'
+import MyCarlanding from './components/MyCarye/MyCarlanding'
+
+
+
 
 //import iconFont from './iconfont/iconfont'
 require('./assets/iconfont/iconfont.css')
@@ -75,6 +79,11 @@ const routes = [
 		path: '/MyCar/MyCarset',
 		name:'MyCarset',
 		component: MyCarset
+	},
+	{
+		path: '/MyCar/MyCarlanding',
+		name:'MyCarset',
+		component: MyCarlanding
 	}
 ]
 
