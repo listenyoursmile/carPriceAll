@@ -29,9 +29,10 @@
 					<h3>{{data.serieName}}</h3>
 					<div>
 						<div>
-							<p><em></em> | <b></b></p>
+							<p><em>2013年</em> | <b>1.9万公里</b></p>
 							<h4>{{data.priceScope}}</h4>
 						</div>
+						<div>北京商家</div>
 					</div>
 				</div>
 			</li>
@@ -116,5 +117,10 @@
 	}
 	.second_select span{
 		color: #d7d7d7;
+	}
+	
+	.second_list li{
+		display: flex;
+		justify-content: flex-start;
 	}
 </style>
