@@ -1,23 +1,25 @@
-<template>
-		<!--<div><router-link :to="/Detail"></router-link></div>-->
+t<template>
 	<div>
+<!--		<div><router-link :to="/Detail"></router-link></div>-->
 		<tabbar style="position: fixed">
 	      <tabbar-item selected link="/">
 	        <img slot="icon" src="../assets/images/footer-1.png">
 	        <span slot="label">新车</span>
+
 	      </tabbar-item>
 	      <tabbar-item link="/SecondCar">
 	        <img slot="icon" src="../assets/images/footer-2.png">
 	        <span slot="label">二手车</span>
-	        
 	      </tabbar-item>
 	      <tabbar-item show-dot link="/FindCar">
 	        <img slot="icon" src="../assets/images/footer-3.png">
 	        <span slot="label">发现</span>
 	      </tabbar-item>
+
 	      <tabbar-item link="/HelpCar">
 	        <img slot="icon" src="../assets/images/footer-4.png">
 	        <span slot="label">帮买车</span>
+
 	      </tabbar-item>
 	      <tabbar-item link="/MyCar">
 	        <img slot="icon" src="../assets/images/footer-5.png">

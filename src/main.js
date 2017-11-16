@@ -16,13 +16,23 @@ import FindCar from './components/FindCar'
 import HelpCar from './components/HelpCar'
 import MyCar from './components/MyCar'
 
+
+
+//我的页面路由的接入
+import MyCarset from './components/MyCarye/MyCarset'
+
+//import iconFont from './iconfont/iconfont'
+require('./assets/iconfont/iconfont.css')
+
 import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
+
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
 
 
-const routes = [{
+const routes = [
+	{
 	path:'/',
 	name:'PageTransition',
 	component:PageTransition,
@@ -62,7 +72,13 @@ const routes = [{
 		}]
 	}]
 
-}]
+	},
+	{
+		path: '/MyCar/MyCarset',
+		name:'MyCarset',
+		component: MyCarset
+	}
+]
 
 const router = new VueRouter({
   routes
