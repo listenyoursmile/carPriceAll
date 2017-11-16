@@ -24,7 +24,7 @@
 			<ul class="clear">
 				<li>
 					<i class="iconfont icon-cheliangxuanzhong"></i>
-					<span>条啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊件宣传</span>
+					<span>条件宣传</span>
 				</li>
 				<li>
 					<i class="iconfont icon-xiaoliangpaixing"></i>
@@ -46,6 +46,7 @@
 			<p><img src="../assets/images/new_nav1.png"/><span>导购</span>领克01亮相广州车展</p>
 		</div>
 		<div class="new_recommend">
+			<p><i class="iconfont icon-like"></i>热门推荐</p>
 			<ul>
 				<li><router-link to="/">
 					<img src=""/>
@@ -117,9 +118,14 @@
 		font-weight: bolder;
 		font-size: 0.55rem;
 	}
+	
+	.new_nav{
+		background: #fff;
+		margin-bottom: 0.3rem;
+	}
 	.new_nav ul{
-		padding-bottom: 0.12rem;;
-		margin-bottom: ;
+		padding: 0.35rem 0 0.12rem;
+		/*margin-bottom: ;*/
 	}
 	.new_nav ul li{
 		float: left;
@@ -170,4 +176,10 @@
 		padding: 0 0.15rem;
 		margin: 0 8px 0 10px;
 	}
+	
+	.new_recommend>p{
+		font-weight: bold;
+		color: #454545;
+	}
+	
 </style>
