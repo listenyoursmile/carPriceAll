@@ -20,5 +20,7 @@
 		background-size: cover;
 		color: #fff;
 		text-align: center;
+		position: fixed;
+		z-index: 100;
 	}
 </style>
