@@ -4,9 +4,12 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
-import Hello from ''
 import Info from './components/Info'
 import Detail from './components/Detail'
+import SecondCar from './components/SecondCar'
+import FindCar from './components/FindCar'
+import HelpCar from './components/HelpCar'
+import MyCar from './components/MyCar'
 import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
 Vue.use(AjaxPlugin)
@@ -16,14 +19,33 @@ const routes = [{
 	path:'/',
 	name:'PageTransition',
 	component:PageTransition,
-	children:[{
+	children:[
+	{
 		path: '',
-  	component: Info
-},{
-	path: '/Detail/:goodsID',
-	name:'Detail',
-	 component: Detail
-  }]
+  		component: Info
+
+	},{
+		path: '/Detail/:goodsID',
+		name:'Detail',
+	  	component: Detail
+	},{
+		path: '/SecondCar',
+		name: 'SecondCar',
+		component:SecondCar
+	},{
+		path: '/FindCar',
+		name: 'FindCar',
+		component:FindCar
+	},{
+		path: '/HelpCar',
+		name: 'HelpCar',
+		component:HelpCar
+	},{
+		path: '/MyCar',
+		name: 'MyCar',
+		component:MyCar
+	}]
+
 }]
 
 const router = new VueRouter({
