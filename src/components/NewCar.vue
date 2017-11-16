@@ -1,10 +1,17 @@
 <template>
-	<p>首页</p>
+	<div>	
+		<x-header>do not show Back</x-header>
+		<p>首页</p>
+	</div>
 </template>
 
 <script>
+	import { XHeader } from 'vux'
 	export default {
-		name:'NewCar'
+		name:'NewCar',
+		components: {
+			XHeader
+		}
 	}
 </script>
 
