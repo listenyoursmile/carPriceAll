@@ -4,6 +4,7 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
+import Hello from ''
 import Info from './components/Info'
 import Detail from './components/Detail'
 import PageTransition from './components/PageTransition'
@@ -18,11 +19,11 @@ const routes = [{
 	children:[{
 		path: '',
   	component: Info
-	},{
-		path: '/Detail/:goodsID',
-		name:'Detail',
-	  component: Detail
-	}]
+},{
+	path: '/Detail/:goodsID',
+	name:'Detail',
+	 component: Detail
+  }]
 }]
 
 const router = new VueRouter({

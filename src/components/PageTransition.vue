@@ -1,6 +1,7 @@
 <template>
   <div>
   <div class="header"></div>
+  <p>aaaa</p>
   <transition :name="transitionName">
     <router-view class="child-view" @to-parent="getChild"></router-view>
   </transition>
@@ -16,6 +17,7 @@
     },
     methods:{
     	getChild(msg){
+    		console.log(msg)
     		this.$emit("to-parent",msg)
     	}
     },
