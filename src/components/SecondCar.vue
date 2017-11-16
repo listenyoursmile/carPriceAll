@@ -46,7 +46,6 @@
 		data(){
 			return {
 				datalist:[]
-				//secondprice:
 			}
 		},
 		mounted(){
@@ -59,8 +58,7 @@
 					brandName:'宝马'
 				}
 			}).then((data)=>{
-				this.datalist = data.data.showapi_res_body.data;
-				//this.secondprice = 
+				this.datalist = data.data.showapi_res_body.data; 
 				console.log(data.data.showapi_res_body.data)
 			})
 		}
