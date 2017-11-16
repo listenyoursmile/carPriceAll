@@ -45,8 +45,8 @@
 		name:'SecondCar',
 		data(){
 			return {
-				datalist:[],
-				secondprice:
+				datalist:[]
+				//secondprice:
 			}
 		},
 		mounted(){
