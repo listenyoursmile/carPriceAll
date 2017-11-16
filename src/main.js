@@ -6,6 +6,8 @@ import VueRouter from 'vue-router'
 import App from './App'
 import Info from './components/Info'
 import Detail from './components/Detail'
+import './assets/iconfont/iconfont.css'
+import './assets/css/reset.css'
 
 //五个主页面路由
 import NewCar from './components/NewCar'
@@ -18,6 +20,7 @@ import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
+
 
 const routes = [{
 	path:'/',

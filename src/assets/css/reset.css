@@ -9,3 +9,18 @@ input,textarea{outline-style:none;}
 textarea{resize:none;}
 article,aside,footer,header,hgroup,nav,section,menu{display:block;}
 address,caption,cite,code,dfn,em,i,th,var{font-style:normal;font-weight:400;}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
+html{
+	font-size: 33.33333px;
+}
+body{
+	font-size: 16px;
+}
+
+img{
+	display: block;
+}
