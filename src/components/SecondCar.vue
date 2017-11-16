@@ -34,14 +34,9 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-	
-=======
 	import { XHeader } from 'vux'
->>>>>>> branch 'master' of https://github.com/listenyoursmile/carPriceAll.git
 	export default{
 		name:'SecondCar',
-<<<<<<< HEAD
 		mounted(){
 			this.$http({
 				method:"get",
@@ -55,10 +50,6 @@
 				console.log(data)
 				console.log(data.ret_code)
 			})
-=======
-		components: {
-			XHeader
->>>>>>> branch 'master' of https://github.com/listenyoursmile/carPriceAll.git
 		}
 	}
 </script>
