@@ -1,14 +1,10 @@
 <template>
-<<<<<<< HEAD
 <div>
+	<x-header :left-options="{showBack:isTrue}" class="box"></x-header>
 	<!--<p @click="goSet">我的车页</p>-->
-<!--<router-link to="/MyCar/MyCarset">跳转</router-link>-->
-	<div class="carimg"><img src="../assets/images/mycar/1.jpg"/></div>
+	<router-link to="/MyCar/MyCarset">跳转</router-link>  
+	<router-view></router-view>
 </div>	
-	<div>
-		<p>我的车页</p>
-		<i class="iconfont icon-search"></i>
-	</div>
 </template>
 
 <script>
@@ -17,7 +13,7 @@
 		name:'MyCar',
 		data(){
 			return {
-				
+				isTrue:false
 			}
 		},
 		components: {
@@ -35,8 +31,7 @@
 </script>
 
 <style>
-	.carimg{
-		height: 3.9rem;
-		width: 100%;
+	.box{
+		background: #fff;
 	}
 </style>

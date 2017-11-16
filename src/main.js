@@ -15,14 +15,12 @@ import HelpCar from './components/HelpCar'
 import MyCar from './components/MyCar'
 
 
-<<<<<<< HEAD
 
 //我的页面路由的接入
 import MyCarset from './components/MyCarye/MyCarset'
-=======
+
 //import iconFont from './iconfont/iconfont'
 require('./assets/iconfont/iconfont.css')
->>>>>>> branch 'master' of https://github.com/listenyoursmile/carPriceAll.git
 
 import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
