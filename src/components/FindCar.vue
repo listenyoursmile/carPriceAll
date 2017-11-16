@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<x-header>do not show Back</x-header>
+		<x-header>发现</x-header>
 		<p>发现页</p>
 	</div>
 </template>

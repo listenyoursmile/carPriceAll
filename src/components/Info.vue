@@ -4,7 +4,6 @@
 		<Footers></Footers>
 	</div>
 </template>
-
 <script>
 	import { Group,Cell } from 'vux'
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
