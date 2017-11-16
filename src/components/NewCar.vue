@@ -179,7 +179,7 @@
 	
 	.new_recommend>p{
 		font-weight: bold;
-		color: #454545;
+		color: #fff;
 	}
 	
 </style>
