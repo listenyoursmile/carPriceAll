@@ -10,7 +10,5 @@
 	}
 </script>
 <style>
-	p{
-		padding-top: 100px !important;
-	}
+	
 </style>
