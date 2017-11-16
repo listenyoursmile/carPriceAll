@@ -2,7 +2,7 @@
 		<!--<div><router-link :to="/Detail"></router-link></div>-->
 	<div>
 		<tabbar style="position: fixed">
-	      <tabbar-item>
+	      <tabbar-item link="/">
 	        <img slot="icon" src="../assets/images/icon_nav_button.png">
 	        <span slot="label">新车</span>
 	      </tabbar-item>
