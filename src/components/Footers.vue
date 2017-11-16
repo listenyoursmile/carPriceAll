@@ -2,30 +2,27 @@
 		<!--<div><router-link :to="/Detail"></router-link></div>-->
 	<div>
 		<tabbar style="position: fixed">
-	      <tabbar-item link="/">
-	        <img slot="icon" src="../assets/images/icon_nav_button.png">
+	      <tabbar-item selected link="/">
+	        <img slot="icon" src="../assets/images/footer-1.png">
 	        <span slot="label">新车</span>
 
 	      </tabbar-item>
 	      <tabbar-item link="/SecondCar">
-	        <img slot="icon" src="../assets/images/icon_nav_msg.png">
-			<span slot="label">二手车</span>
+	        <img slot="icon" src="../assets/images/footer-2.png">
+	        <span slot="label">二手车</span>
 	      </tabbar-item>
-	      
-	      
-			<tabbar-item selected link="/FindCar">
-	        <img slot="icon" src="../assets/images/icon_nav_article.png">
+	      <tabbar-item show-dot link="/FindCar">
+	        <img slot="icon" src="../assets/images/footer-3.png">
 	        <span slot="label">发现</span>
 	      </tabbar-item>
-	      
-	      
 
-	      <tabbar-item badge="2" link="/HelpCar">
-	        <img slot="icon" src="../assets/images/icon_nav_cell.png">
+	      <tabbar-item link="/HelpCar">
+	        <img slot="icon" src="../assets/images/footer-4.png">
 	        <span slot="label">帮买车</span>
+
 	      </tabbar-item>
-	      <tabbar-item badge="2" link="/MyCar">
-	        <img slot="icon" src="../assets/images/icon_nav_cell.png">
+	      <tabbar-item link="/MyCar">
+	        <img slot="icon" src="../assets/images/footer-5.png">
 	        <span slot="label">我的</span>
 	      </tabbar-item>
 	      

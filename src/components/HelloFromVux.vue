@@ -1,28 +1,26 @@
 <template>
 	<div>
-		<x-header :left-options="{showBack: isTrue}">do not show Back</x-header>
+		<!--<x-header :left-options="{showBack: isTrue}">do not show Back</x-header>-->
 		<router-view @to-parent="getchild"></router-view>
-		<Footers></Footers>
 	</div>
 </template>
 
 <script>
-import { XHeader } from 'vux'
-import Footers from '@/components/Footers'
+//import { XHeader } from 'vux'
+
 
 export default {
   components: {
-    XHeader,
-    Footers
+  	//  XHeader
   },
   data () {
     return {
-      isTrue:false
+//    isTrue:false
     }
   },
   methods:{
   	getchild(value){
-  		this.isTrue = value;
+//		this.isTrue = value;
   	}
   }
 }
