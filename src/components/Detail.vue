@@ -2,6 +2,8 @@
 	<div>
 		<div>这是详情页</div>
 		<p>{{$route.params.goodsID}}</p>
+		
+		
 	</div>
 </template>
 
