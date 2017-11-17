@@ -24,8 +24,7 @@
 			XHeader
 		},
 		methods:{
-			
-
+		
 		}
 	}
 </script>

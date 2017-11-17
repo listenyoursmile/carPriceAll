@@ -113,7 +113,7 @@
 			    // 获取需要滚动的距离
 			    let total = jump.offsetTop
 			    // Chrome
-			    document.body.scrollTop = -total + 'px'
+			    document.body.scrollTop = total + 'px'
 			    // Firefox
 			    document.documentElement.scrollTop = total
 			    // Safari

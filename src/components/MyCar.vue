@@ -2,7 +2,7 @@
 <div class="mycartm">
 	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件标签名-->
 	<div class="cartop" @click="goLanding">
-		<img src="../assets/images/mycar/1.jpg"/>
+		<!--<img src="../assets/images/mycar/1.jpg"/>-->
 	</div>
 	<p class="landorder">我的订单</p>
 	<div class="landfour">
