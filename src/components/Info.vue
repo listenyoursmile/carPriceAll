@@ -28,7 +28,7 @@
 	        },
 	        datalist:[]
 	      }
-	    },
+	    }/*,
 	    mounted(){
 	    	this.$http({
 	    		method:'get',
@@ -37,7 +37,7 @@
 	    		console.log(eval(data.data));
 	    		this.datalist = eval(data.data)
 	    	})
-	    }
+	    }*/
 		
 	}
 </script>
