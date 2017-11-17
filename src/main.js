@@ -10,7 +10,6 @@ import './assets/iconfont/iconfont.css'
 import './assets/css/reset.css'
 
 //五个主页面路由
-//你说是啥就是傻
 import NewCar from './components/NewCar'
 import SecondCar from './components/SecondCar'
 import FindCar from './components/FindCar'

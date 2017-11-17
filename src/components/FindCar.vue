@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<Headers>
-			<div slot="headers">			
+		<Headers>		
+			<div slot="headers">
+			   	<x-header></x-header>
 			</div>
 		</Headers>
 		<p><img src="../assets/images/findcar/f1.jpg" alt="" class="top_photo"  /></p>	
