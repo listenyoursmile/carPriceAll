@@ -60,9 +60,9 @@
 				</router-link></li>
 			</ul>
 		</div>
-		<div class="new_list">
+		<brandList>
 			
-		</div>
+		</brandList>
 		<router-view></router-view>
 	</div>
 </template>
@@ -70,12 +70,13 @@
 <script>
 	import { XHeader } from 'vux'
 	import Headers from '@/components/Headers'
+	import brandList from '@/components/getBrandList'
 	import {swiper,swiperSlide} from "vue-awesome-swiper"
 	
 	export default {
 		name:'NewCar',
 		components: {
-			XHeader,Headers,swiper,swiperSlide
+			XHeader,Headers,swiper,swiperSlide,brandList
 		},
 		data(){
 			return {

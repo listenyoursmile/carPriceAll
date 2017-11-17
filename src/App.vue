@@ -6,8 +6,7 @@
 
 <script>
 	import HelloWorld from "@/components/HelloFromVux"
-	
-//	var brandList = new Set('a')
+//	import getBrandList from "@/components/getBrandList"
 	
 export default {
   name: 'app',
@@ -18,25 +17,7 @@ export default {
 		return {
 			brandList:[]
 		}
-	},
-	mounted(){
-		//按首字母获取品牌列表
-		var iList = new Set()
-		  this.$http({
-				method:'get',
-				url:"assets/datas/brandlist.json"
-			}).then((data)=>{
-					/*let bList = eval(data.data).showapi_res_body.data;
-					bList.forEach(function(v,k){
-						iList.add(JSON.stringify({'brandName':v.brandName,'imgLogo':v.imgLogo}))
-					})
-					this.brandList.push(Array.from(iList))
-					this.brandList.forEach(function(v){
-						console.log(v)
-					})*/
-				console.log(data)
-			})
-		}
+	}
 }
 
 /*
