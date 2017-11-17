@@ -11,7 +11,7 @@
 				</p>	
 			</div>
 			<div class="huo_tital">
-				<img src="../assets/images/findcar/f3.png" alt="" />
+				<img src="../assets/images/findcar/f3.jpg" alt="" />
 				<p>
 					 <b>游戏广场</b>
 				    <i>我是车手决战巅峰</i>
@@ -22,7 +22,7 @@
 			<p>买车必备</p>
 			<swiper>
 				<swiper-slide>
-				       <!--<ul class="find_choose">
+				       <ul class="find_choose">
 				       	   <li>
 				       	   	   <b><img src="../assets/images/findcar/f4.png"/></b>
 				       	   	   <i>车型对比</i>
@@ -57,7 +57,7 @@
 				       	   	   <i>上市新车</i>
 				       	   </li>
 				       </ul>
-				       -->
+				      
 				      	   <!--<group-title></group-title>
 						    <grid :cols="4" v-for="data in datalist">	
 						      <grid-item v-for="i in 8" :key="i">
@@ -65,29 +65,29 @@
 						        	<img src="../assets/images/mycar/f4.png"/>
 						        	<i>{{data.seriesRecordId}}</i>
 						        </span>
-						      </grid-item>
+						      </grid-item>   
 						    </grid>-->
 				</swiper-slide>
 				<swiper-slide>
-					   <!--<ul class="find_choose choose_two">
+					   <ul class="find_choose choose_two">
 				       	   <li>
-				       	   	   <b><img src="../assets/images/findcar/f12.png"/></b>
+				       	   	     <b><img src="../assets/images/findcar/f10.png"/></b>
 				       	   	   <i>车型对比</i>
 				       	   </li>
 				       	   <li>
-				       	   	    <b><img src="../assets/images/findcar/f13.png"/></b>
+				       	   	     <b><img src="../assets/images/findcar/f10.png"/></b>
 				       	   	    <i>购车计算器</i>
 				       	   </li>
 				       	   <li>
-				       	    	<b><img src="../assets/images/findcar/f14.png"/></b>
+				       	    	  <b><img src="../assets/images/findcar/f10.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				       	   <li>
-				       	    	<b><img src="../assets/images/findcar/f15.png"/></b>
+				       	    	  <b><img src="../assets/images/findcar/f10.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				      </ul>
-                  -->
+                 
 				</swiper-slide>
 				<div class="swoper-pagination"></div>
 			</swiper>
