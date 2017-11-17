@@ -48,7 +48,7 @@ const routes = [
 		  	component: NewCar
 		  	
 		},{
-			path: '/Detail/:goodsID',
+			path: '/Detail/:seriesRecordId',
 			name:'Detail',
 		  	component: Detail
 		  	
