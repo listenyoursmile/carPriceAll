@@ -30,8 +30,21 @@
 </template>
 
 <script>
+	import Vue from 'vue'
+	import Vuex from 'vuex'
 	import PullTo from 'vue-pull-to'
 	import { XHeader } from 'vux'
+	/*var state = {
+    isLogin:0,          //初始时候给一个  isLogin=0  表示用户未登录
+	};
+	const mutations = {
+	    changeLogin(state,data){
+	        state.isLogin = data;
+	    }
+	
+	};
+	*/
+	
 	const config = {//上拉的名字
 	  pullText: '下拉', // 下拉时显示的文字
 	  triggerText: '释放更新', // 下拉到触发距离时显示的文字
@@ -71,14 +84,22 @@
 			Mycar1:function(){
 				this.$router.push({path:"/MyCar/MyCarset"})
 			},
+			//上下拉刷新
 			refresh:function(loaded) {
 		        setTimeout(() => {
 		        	loaded('done');//成功
+		        	
 		        	//loaded('fail')//失败
 		        }, 2000);
 		     }
 
-		}
+		}/*,
+		mutations:{
+			 increment(state){
+			 this.$store.commit('changeLogin','100')	
+			 }
+			
+		}*/
 		
 	}
 </script>
