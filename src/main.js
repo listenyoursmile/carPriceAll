@@ -21,7 +21,7 @@ import MyCar from './components/MyCar'
 //我的页面路由的接入
 import MyCarset from './components/MyCarye/MyCarset'
 import MyCarlanding from './components/MyCarye/MyCarlanding'
-
+import MyCarregisiter from './components/MyCarye/MyCarregister'
 
 
 
@@ -84,8 +84,13 @@ const routes = [
 	},
 	{
 		path: '/MyCar/MyCarlanding',
-		name:'MyCarset',
+		name:'MyCarlanding',
 		component: MyCarlanding
+	},
+	{
+		path: '/MyCar/MyCarregisiter',
+		name:'MyCarregisiter',
+		component: MyCarregisiter
 	}
 ]
 

@@ -1,15 +1,11 @@
 <template>
 	<div>
-		<x-header :left-options="{showBack: isTrue}" class="carimg"><span @click="goCar" style="position: absolute;right: 0.5rem;">x</span>账号登陆</x-header>
+		<x-header :left-options="{showBack: isTrue}" class="carimg">账账号注册</x-header>
 		<div class="langbut">
-			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的用户名" /></li>
-			<li><input type="password" placeholder="请输入你的用密码" /></li>
-			
-			<button>登陆</button>
-			<p class="langgo">
-				<router-link to="/MyCar/MyCarregisiter">立即注册</router-link>
-				<router-link to="/MyCar/MyCarset">忘记密码</router-link>
-			</p>
+			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的手机号" /></li>
+			<li><input type="text" placeholder="请输入你的用密码" /></li>
+			<li><input type="text" placeholder="请输入你验证码" /></li>
+			<button>下一步</button>
 		</div>
 		
 	</div>
@@ -18,19 +14,17 @@
 <script>
 	import { XHeader } from 'vux'
 	export default{
-		name:'MyCarset',
+		name:'SecondCar',
 		data(){
 			return{
-				isTrue:false
+				isTrue:true
 			}
 		},
 		components: {
 			XHeader
 		},
 		methods:{
-			goCar:function(){
-				this.$router.push({path:"/MyCar"})
-			}
+			
 
 		}
 	}
