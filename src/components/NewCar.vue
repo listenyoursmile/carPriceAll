@@ -48,9 +48,10 @@
 		<div class="new_recommend">
 			<p><i class="iconfont icon-like"></i>热门推荐</p>
 			<ul>
-				<li><router-link to="/">
-					<img src=""/>
-					<span>斯柯达</span>
+				<li><router-link to="/" v-for="data in nh_datalist">
+					<img v-bind:src="data.imgLogo"/>
+					{{data.brandName}}
+					<span>{{data.serieName}}</span>
 				</router-link></li>
 			</ul>
 			<ul>
@@ -59,9 +60,9 @@
 				</router-link></li>
 			</ul>
 		</div>
-		<div class="new_list">
+		<brandList>
 			
-		</div>
+		</brandList>
 		<router-view></router-view>
 	</div>
 </template>
@@ -69,14 +70,32 @@
 <script>
 	import { XHeader } from 'vux'
 	import Headers from '@/components/Headers'
+	import brandList from '@/components/getBrandList'
 	import {swiper,swiperSlide} from "vue-awesome-swiper"
 	
 	export default {
 		name:'NewCar',
 		components: {
-			XHeader,Headers,swiper,swiperSlide
-		}
+			XHeader,Headers,swiper,swiperSlide,brandList
+		},
+		data(){
+			return {
+				nh_datalist:[]
+			}
+		},
+	    mounted(){
+	    	this.$http({
+	    		method:'get',
+	    		url:"http://route.showapi.com/1264-2",
+	    		params:{"showapi_appid":"50165","showapi_sign":"1440776b2fea4758a53d91137ee22b87","brandKey":"a"}
+	    	}).then((data)=>{
+	    		this.nh_datalist = eval(data.data).showapi_res_body.data.slice(0,9);
+	    	})
+	    }
 	}
+	
+	
+	
 </script>
 
 <style>
@@ -179,7 +198,15 @@
 	
 	.new_recommend>p{
 		font-weight: bold;
-		color: #fff;
+		color: #454545;
+		font-size: 0.4rem;
 	}
-	
+	.new_recommend>p i{
+		width: 0.48rem;
+		height: 0.48rem;
+		font-size: 0.36rem;
+		color: #fff;
+		background: #1d88eb;
+		border-radius: 50%;
+	}
 </style>

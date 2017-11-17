@@ -21,6 +21,10 @@ import MyCar from './components/MyCar'
 
 //我的页面路由的接入
 import MyCarset from './components/MyCarye/MyCarset'
+import MyCarlanding from './components/MyCarye/MyCarlanding'
+import MyCarregisiter from './components/MyCarye/MyCarregister'
+
+
 
 //import iconFont from './iconfont/iconfont'
 require('./assets/iconfont/iconfont.css')
@@ -78,12 +82,26 @@ const routes = [
 		path: '/MyCar/MyCarset',
 		name:'MyCarset',
 		component: MyCarset
+	},
+	{
+		path: '/MyCar/MyCarlanding',
+		name:'MyCarlanding',
+		component: MyCarlanding
+	},
+	{
+		path: '/MyCar/MyCarregisiter',
+		name:'MyCarregisiter',
+		component: MyCarregisiter
 	}
 ]
 
 const router = new VueRouter({
   routes
 })
+
+
+
+
 
 FastClick.attach(document.body)
 
