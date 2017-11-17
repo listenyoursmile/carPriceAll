@@ -7,14 +7,14 @@
 		</Headers>
 		<p><img src="../assets/images/findcar/f1.jpg" alt="" class="top_photo"  /></p>	
 		<div class="find_huo">
-			<div class="huo_tital huo_one">
+			<div class="huo_tital huo_one" link="/Findactive">
 				<img src="../assets/images/findcar/f2.png" alt="" />
 				<p>
 					<b>活动专区</b>
 				    <i>豪送5万元京东卡</i>
 				</p>	
 			</div>
-			<div class="huo_tital">
+			<div class="huo_tital" link="/Findactive">
 				<img src="../assets/images/findcar/f3.jpg" alt="" />
 				<p>
 					 <b>游戏广场</b>
