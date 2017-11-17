@@ -1,4 +1,4 @@
-t<template>
+<template>
 	<div>
 <!--		<div><router-link :to="/Detail"></router-link></div>-->
 		<tabbar style="position: fixed">
