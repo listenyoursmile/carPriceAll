@@ -1,5 +1,6 @@
 <template>
 <div class="mycartm">
+	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件标签名-->
 	<div class="cartop" @click="goLanding">
 		<img src="../assets/images/mycar/1.jpg"/>
 	</div>
@@ -24,20 +25,44 @@
 	</ul>
 	<!--<p @click="goSet">我的车页</p>-->
 	<!--<router-link to="/MyCar/MyCarset">跳转</router-link>  -->
+	</pull-to>
 </div>	
 </template>
 
 <script>
+	import PullTo from 'vue-pull-to'
 	import { XHeader } from 'vux'
+	const config = {//上拉的名字
+	  pullText: '下拉', // 下拉时显示的文字
+	  triggerText: '释放更新', // 下拉到触发距离时显示的文字
+	  loadingText: '加载中...', // 加载中的文字
+	  doneText: '加载完成', // 加载完成的文字
+	  failText: '加载失败', // 加载失败的文字
+	  loadedStayTime: 400, // 加载完后停留的时间ms
+	  stayDistance: 50, // 触发刷新后停留的距离
+	  triggerDistance: 70 // 下拉刷新触发的距离
+	}
+	const bottomConfig = {//上拉的名字
+	  pullText: '上拉加载',
+	  triggerText: '释放更新',
+	  loadingText: '加载中...',
+	  doneText: '加载完成',
+	  failText: '加载失败',
+	  loadedStayTime: 400,
+	  stayDistance: 50,
+	  triggerDistance: 70
+	}
 	export default {
 		name:'MyCar',
 		data(){
 			return {
-			
+				topConfig:config,
+				bottomConfig
 			}
 		},
 		components: {
-			XHeader
+			XHeader,
+			 PullTo
 		},
 		methods:{
 			goLanding:function(){
@@ -45,7 +70,13 @@
 			},
 			Mycar1:function(){
 				this.$router.push({path:"/MyCar/MyCarset"})
-			}
+			},
+			refresh:function(loaded) {
+		        setTimeout(() => {
+		        	loaded('done');//成功
+		        	//loaded('fail')//失败
+		        }, 2000);
+		     }
 
 		}
 		

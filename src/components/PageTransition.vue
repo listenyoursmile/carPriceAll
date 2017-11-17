@@ -1,6 +1,5 @@
 <template>
   <div>
-  <div class="header"></div>
   <transition :name="transitionName">
     <router-view class="child-view" @to-parent="getChild"></router-view>
   </transition>
@@ -35,7 +34,6 @@
 
 <style scoped>
   .child-view {
-  position: absolute;
   width:100%;
   transition: all .8s cubic-bezier(.55,0,.1,1);
   }
@@ -48,10 +46,5 @@
     opacity: 0;
     -webkit-transform: translate(-50px, 0);
     transform: translate(-50px, 0);
-  }
-  .header {
-    position:absolute;
-    height:44px;
-    width:100%
   }
 </style>
