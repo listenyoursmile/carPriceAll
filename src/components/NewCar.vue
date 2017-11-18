@@ -99,6 +99,9 @@
 </script>
 
 <style>
+	.headers{
+		z-index: 100;
+	}
 	.clear{
 		overflow: hidden;
 	}

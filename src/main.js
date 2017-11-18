@@ -25,7 +25,7 @@ import MyCar from './components/MyCar'
 import MyCarset from './components/MyCarye/MyCarset'
 import MyCarlanding from './components/MyCarye/MyCarlanding'
 import MyCarregisiter from './components/MyCarye/MyCarregister'
-Vue.use(Vuex);
+
 /*                                     分界限                               */
 //import iconFont from './iconfont/iconfont'
 require('./assets/iconfont/iconfont.css')
@@ -35,6 +35,8 @@ import {AjaxPlugin} from 'vux'
 
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
+Vue.use(Vuex);
+
 
 
 const routes = [
