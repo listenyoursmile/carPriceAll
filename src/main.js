@@ -43,10 +43,12 @@ import Findactive2 from './components/FindCarye/Findactive2'
 //import Findactivechild from './components/FindCarye/Findactivechild'
 //
 
+var zepto = require('n-zepto');
+
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
 Vue.use(Vuex);
-
+Vue.use(zepto);
 
 
 const routes = [

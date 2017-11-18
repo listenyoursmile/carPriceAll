@@ -1,17 +1,18 @@
 <template>
 	<div>
 		<Headers>
-			<div slot="headers">
-				<span class="new_hs_left">上海</span>
-				<div class="new_hs_right">
-					<p class="new_ser">
-						<i class="iconfont icon-search"></i><span>名爵6</span>
-					</p>
-					<i class="iconfont icon-duihua"></i>
-					<i class="iconfont icon-iconzhaoxiangji"></i>
-				</div>
-			</div>
 		</Headers>
+		<div class="header">
+					<span class="new_hs_left">上海</span>
+					<div class="new_hs_right">
+						<p class="new_ser">
+							<i class="iconfont icon-search"></i><span>名爵6</span>
+						</p>
+						<i class="iconfont icon-duihua"></i>
+						<i class="iconfont icon-iconzhaoxiangji"></i>
+					</div>
+				</div>
+		
 		<div class="new_banner">
 			<swiper>
 				<swiper-slide><img src="../assets/images/banner1.jpg" width="100%"/></swiper-slide>
@@ -100,7 +101,17 @@
 
 <style>
 	.headers{
-		z-index: 100;
+		opacity: 0;
+		z-index: 10;
+	}
+	.header{
+		z-index: 11;
+		height: 1.5rem;
+		width: 100%;
+		background-size: cover;
+		color: #fff;
+		text-align: center;
+		position: fixed;
 	}
 	.clear{
 		overflow: hidden;
@@ -139,6 +150,9 @@
 		margin-right: 0.4rem;
 		font-weight: bolder;
 		font-size: 0.55rem;
+	}
+	.new_banner .swiper-container{
+		height: 4.05rem;
 	}
 	
 	.new_nav{
