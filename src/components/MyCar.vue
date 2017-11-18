@@ -1,50 +1,40 @@
 <template>
 <div class="mycartm">
-	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件标签名-->
-	<div class="cartop" @click="goLanding">
-		<img src="../assets/images/mycar/1.jpg"/>
+	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件使用的标签名-->
+	<div class="cartop">
+		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}" @click="goLanding"/>
+		<div v-bind:class="{macaruser:isUser}" class="macarus" @click="myCarCenter">
+			<img src="../assets/images/mycar/2.jpg" class="mycarportrait"/>
+			<p>{{myCarname}}<br/>{{myCarautograph}}</p><span style="float: right;margin-top: 0.6rem;color: #eef6fe;">></span>
+		</div>
 	</div>
 	<p class="landorder">我的订单</p>
 	<div class="landfour">
-		<li><a href="">买新车</a></li>
-		<li><a href="">今日疯抢</a></li>
-		<li><a href="">超值特惠</a></li>
-		<li><a href="">新车询价</a></li>
-		<li><a href="">新车贷款</a></li>
+		<li><router-link to="/MyCar/MyCarlanding">买新车</router-link></li>
+		<li><router-link to="/MyCar">今日疯抢</router-link></li>
+		<li><router-link to="/MyCar">超级特惠</router-link></li>
+		<li><router-link to="/MyCar">新车询价</router-link></li>
+		<li><router-link to="/MyCar">新车贷款</router-link></li>
 	</div>
 	
 	<ul class="mycarul">
-		<li @click="Mycar1"><span></span>我的社区<b>></b></li>
-		<li @click="Mycar1"><span></span>签到领车币<b>></b></li>
-		<li @click="Mycar1"><span></span>车币商城<b>></b></li>
-		<li @click="Mycar1"><span></span>我的优惠券<b>></b></li>
-		<li @click="Mycar1"><span></span>车型收藏<b>></b></li>
-		<li @click="Mycar1"><span></span>浏览历史<b>></b></li>
-		<li @click="Mycar1"><span></span>用户反馈<b>></b></li>
-		<li @click="Mycar1"><span></span>设置<b>></b></li>
+		<li @click="MycarCommunity"><span></span>我的社区<b>></b></li>
+		<li @click="MycarSign"><span></span>签到领车币<b>></b></li>
+		<li @click="MycarShopping"><span></span>车币商城<b>></b></li>
+		<li @click="MycarDiscount"><span></span>我的优惠券<b>></b></li>
+		<li @click="MycarCollection"><span></span>车型收藏<b>></b></li>
+		<li @click="MycarHistory"><span></span>浏览历史<b>></b></li>
+		<li @click="Mycarfeedback"><span></span>用户反馈<b>></b></li>
+		<li @click="Mycarset"><span></span>设置<b>></b></li>
 	</ul>
-	<!--<p @click="goSet">我的车页</p>-->
-	<!--<router-link to="/MyCar/MyCarset">跳转</router-link>  -->
 	</pull-to>
 </div>	
 </template>
-
+	<!--<p @click="goSet">我的车页</p>-->
+	<!--<router-link to="/MyCar/MyCarset">跳转</router-link>  -->
 <script>
-	import Vue from 'vue'
-	import Vuex from 'vuex'
 	import PullTo from 'vue-pull-to'
 	import { XHeader } from 'vux'
-	/*var state = {
-    isLogin:0,          //初始时候给一个  isLogin=0  表示用户未登录
-	};
-	const mutations = {
-	    changeLogin(state,data){
-	        state.isLogin = data;
-	    }
-	
-	};
-	*/
-	
 	const config = {//上拉的名字
 	  pullText: '下拉', // 下拉时显示的文字
 	  triggerText: '释放更新', // 下拉到触发距离时显示的文字
@@ -65,24 +55,61 @@
 	  stayDistance: 50,
 	  triggerDistance: 70
 	}
+	/*console.log(this.$route.params.userID)*/
 	export default {
 		name:'MyCar',
 		data(){
 			return {
 				topConfig:config,
-				bottomConfig
+				bottomConfig,
+				isTrue:false,
+				isUser:true,
+				myCarautograph:this.$store.state.myCarautograph,
+				myCarname:this.$store.state.userID
 			}
 		},
 		components: {
 			XHeader,
 			 PullTo
 		},
+		mounted(){
+			if(this.$store.state.isLogin==0){
+				this.isTrue=false
+			}else{
+				this.isTrue=true
+				this.isUser=false
+			}
+		},
 		methods:{
 			goLanding:function(){
 				this.$router.push({path:"/MyCar/MyCarlanding"})
 			},
-			Mycar1:function(){
+			MycarSign:function(){
+				this.$router.push({path:"/MyCar/MycarSign"})
+			},
+			MycarShopping:function(){
+				this.$router.push({path:"/MyCar/MycarShopping"})
+			},
+			MycarCommunity:function(){
+				this.$router.push({path:"/MyCar/MycarCommunity"})
+			},
+			MycarDiscount:function(){
+				this.$router.push({path:"/MyCar/MycarDiscount"})
+			},
+			MycarCollection:function(){
+				this.$router.push({path:"/MyCar/MycarCollection"})
+			},
+			MycarHistory:function(){
+				this.$router.push({path:"/MyCar/MycarHistory"})
+			},
+			Mycarfeedback:function(){
+				this.$router.push({path:"/MyCar/Mycarfeedback"})
+			},
+			Mycarset:function(){
 				this.$router.push({path:"/MyCar/MyCarset"})
+			},
+			myCarCenter:function(){
+				this.$router.push({path:"/MyCar/myCarCenter"})
 			},
 			//上下拉刷新
 			refresh:function(loaded) {
@@ -92,14 +119,7 @@
 		        	//loaded('fail')//失败
 		        }, 2000);
 		     }
-
-		}/*,
-		mutations:{
-			 increment(state){
-			 this.$store.commit('changeLogin','100')	
-			 }
-			
-		}*/
+		}
 		
 	}
 </script>
@@ -137,7 +157,7 @@
 	}
 	.landfour a{
 		font-size: 0.35rem;
-		color: #c1c1c1;
+		color: #9a9a9a;
 	}
 	.mycarul{
 		margin-top: 0.3rem;
@@ -147,9 +167,33 @@
 	.mycarul li{
 		height: 1.5rem;
 		line-height: 1.5rem;
-		
+		border-bottom: 1 solid #ccc;
+		color: #666666;
 	}
 	.mycarul b{
 		float: right;
+	}
+	.macarimg{
+		display: none;
+	}
+	.macaruser{
+		display: none;
+	}
+	.macarus{
+		padding: 1rem 0.88rem;
+		height: 100%;
+		background: #1498FD;
+	}
+	.cartop .mycarportrait{
+		float: left;
+		width: 1.76rem;
+		height: 1.76rem;
+		border-radius: 50%;
+	}
+	.macarus p{
+		float: left;
+		font-size: 0.5rem;
+		color: #fff;
+		margin: 0.6rem 0 0.6rem 0.6rem;
 	}
 </style>
