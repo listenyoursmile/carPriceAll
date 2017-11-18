@@ -33,6 +33,16 @@ require('./assets/iconfont/iconfont.css')
 import PageTransition from './components/PageTransition'
 import {AjaxPlugin} from 'vux'
 
+
+//发现车
+import Jump from './components/FindCarye/Jump'
+import Findactive from './components/FindCarye/Findactive'
+import Findactive2 from './components/FindCarye/Findactive2'
+
+//import Activejump from './components/FindCarye/Activejump'
+//import Findactivechild from './components/FindCarye/Findactivechild'
+//
+
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
 Vue.use(Vuex);
@@ -67,7 +77,34 @@ const routes = [
 		},{
 			path: '/FindCar',
 			name: 'FindCar',
-			component:FindCar
+			component:FindCar,
+			children:[
+			{
+			   path: '/FindCar',
+			   name:'Jump',
+			   component: Jump	
+			 },
+			 {
+			   path: '/FindCar/Findactive',
+			   name:'Findactive',
+			   component: Findactive,
+//			   children:[
+//			   {
+//			   	   path:'/Findactive',
+//			       name:'Activejump',
+//			       component: Activejump
+//			   },{
+//			   	   path: '/FindCar/Findactive/Findactivechild',
+//			       name:'Findactivechild',
+//			       component: Findactivechild,
+//			     }      
+//			   ]
+			 },{
+			   path: '/FindCar/Findactive2',
+			   name:'Findactive2',
+			   component: Findactive2	
+			 }
+			]
 			
 		},{
 			path: '/HelpCar',
