@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
+import $ from 'n-zepto'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
@@ -28,6 +29,9 @@ import MyCarregisiter from './components/MyCarye/MyCarregister'
 Vue.use(Vuex);
 /*                                     分界限                               */
 //import iconFont from './iconfont/iconfont'
+import Helpbuys from './components/Helpbuys'
+import Helpsell from './components/Helpsell'
+
 require('./assets/iconfont/iconfont.css')
 
 import PageTransition from './components/PageTransition'
@@ -61,7 +65,14 @@ const routes = [
 			path: '/SecondCar',
 			name: 'SecondCar',
 			component:SecondCar
-			
+		},{
+			path: '/Helpbuys',
+			name:'Helpbuys',
+			component: Helpbuys
+		},{
+			path: '/Helpsell',
+			name:'Helpsell',
+			component: Helpsell
 		},{
 			path: '/FindCar',
 			name: 'FindCar',

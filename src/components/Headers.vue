@@ -21,6 +21,6 @@
 		color: #fff;
 		text-align: center;
 		position: fixed;
-		/*z-index: 100;*/
+		z-index: 101;
 	}
 </style>
