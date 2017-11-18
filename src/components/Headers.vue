@@ -7,7 +7,7 @@
 <script>
 	export default {
 		name:'Headers',
-			components:{
+		components:{
 		}
 	}
 </script>
@@ -21,6 +21,6 @@
 		color: #fff;
 		text-align: center;
 		position: fixed;
-		z-index: 100;
+		/*z-index: 100;*/
 	}
 </style>

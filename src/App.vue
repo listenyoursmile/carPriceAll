@@ -6,12 +6,26 @@
 
 <script>
 	import HelloWorld from "@/components/HelloFromVux"
+//	import getBrandList from "@/components/getBrandList"
+	
 export default {
   name: 'app',
   components:{
   	HelloWorld
+	},
+	data(){
+		return {
+			brandList:[]
+		}
 	}
 }
+
+/*
+var brandList=[];
+function getBrandList(){
+	
+}*/
+
 </script>
 
 <style lang="less">
