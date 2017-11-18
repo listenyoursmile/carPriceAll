@@ -25,7 +25,26 @@ import MyCar from './components/MyCar'
 import MyCarset from './components/MyCarye/MyCarset'
 import MyCarlanding from './components/MyCarye/MyCarlanding'
 import MyCarregisiter from './components/MyCarye/MyCarregister'
-Vue.use(Vuex);
+
+import MycarCommunity from './components/MyCarye/MycarCommunity'
+import MycarSign from './components/MyCarye/MycarSign'
+import MycarShopping from './components/MyCarye/MycarShopping'
+import MycarDiscount from './components/MyCarye/MycarDiscount'
+import MycarCollection from './components/MyCarye/MycarCollection'
+import MycarHistory from './components/MyCarye/MycarHistory'
+import Mycarfeedback from './components/MyCarye/Mycarfeedback'
+	Vue.use(Vuex);
+	//使用vuex的Store状态仓库设置全局
+	const store = new Vuex.Store({
+		state:{
+	    	isLogin:0,          //初始时候给一个  isLogin=0  表示用户未登录
+		},
+		mutations:{
+	    changeLogin(state,data){
+	        state.isLogin = data;
+	    }
+		}
+	})
 /*                                     分界限                               */
 //import iconFont from './iconfont/iconfont'
 require('./assets/iconfont/iconfont.css')
@@ -79,22 +98,59 @@ const routes = [
 	}]
 
 	},
-	{
+	{//设置
 		path: '/MyCar/MyCarset',
 		name:'MyCarset',
-		component: MyCarset/*,
-		meta:{auth:true}*/
+		component: MyCarset
 	},
-	{
+	{//登陆
 		path: '/MyCar/MyCarlanding',
 		name:'MyCarlanding',
 		component: MyCarlanding
 	},
-	{
+	{//注册
 		path: '/MyCar/MyCarregisiter',
 		name:'MyCarregisiter',
 		component: MyCarregisiter
-	}
+	},
+	{//我的社区
+		path: '/MyCar/MycarCommunity',
+		name:'MycarCommunity',
+		component: MycarCommunity,
+		meta:{auth:true}//页面需要判断要不要登陆
+	},
+	{//签到
+		path: '/MyCar/MycarSign',
+		name:'MycarSign',
+		component: MycarSign,
+		meta:{auth:true}//页面需要判断要不要登陆
+	},
+	{//商城
+		path: '/MyCar/MycarShopping',
+		name:'MycarShopping',
+		component: MycarShopping
+	},
+	{//优惠劵
+		path: '/MyCar/MycarDiscount',
+		name:'MycarDiscount',
+		component: MycarDiscount,
+		meta:{auth:true}//页面需要判断要不要登陆
+	},
+	{//收藏
+		path: '/MyCar/MycarCollection',
+		name:'MycarCollection',
+		component: MycarCollection
+	},
+	{//历史
+		path: '/MyCar/MycarHistory',
+		name:'MycarHistory',
+		component: MycarHistory
+	},
+	{//反馈
+		path: '/MyCar/Mycarfeedback',
+		name:'Mycarfeedback',
+		component: Mycarfeedback
+	},
 ]
 const router = new VueRouter({
   routes
@@ -120,6 +176,6 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  router,
+  router,store,
   render: h => h(App)
 }).$mount('#app-box')
