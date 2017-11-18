@@ -1,12 +1,13 @@
 <template>
 <div class="mycartm">
-	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件标签名-->
+	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件使用的标签名-->
 	<div class="cartop" @click="goLanding">
-		<img src="../assets/images/mycar/1.jpg"/>
+		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}"/>
+		<div v-bind:class="{macaruser:isUser}" class="macarus"></div>
 	</div>
 	<p class="landorder">我的订单</p>
 	<div class="landfour">
-		<li><a href="">买新车</a></li>
+		<li><a href="/MyCar/MyCarlanding">买新车</a></li>
 		<li><a href="">今日疯抢</a></li>
 		<li><a href="">超值特惠</a></li>
 		<li><a href="">新车询价</a></li>
@@ -14,37 +15,23 @@
 	</div>
 	
 	<ul class="mycarul">
-		<li @click="Mycar1"><span></span>我的社区<b>></b></li>
-		<li @click="Mycar1"><span></span>签到领车币<b>></b></li>
-		<li @click="Mycar1"><span></span>车币商城<b>></b></li>
-		<li @click="Mycar1"><span></span>我的优惠券<b>></b></li>
-		<li @click="Mycar1"><span></span>车型收藏<b>></b></li>
-		<li @click="Mycar1"><span></span>浏览历史<b>></b></li>
-		<li @click="Mycar1"><span></span>用户反馈<b>></b></li>
-		<li @click="Mycar1"><span></span>设置<b>></b></li>
+		<li @click="MycarCommunity"><span></span>我的社区<b>></b></li>
+		<li @click="MycarSign"><span></span>签到领车币<b>></b></li>
+		<li @click="MycarShopping"><span></span>车币商城<b>></b></li>
+		<li @click="MycarDiscount"><span></span>我的优惠券<b>></b></li>
+		<li @click="MycarCollection"><span></span>车型收藏<b>></b></li>
+		<li @click="MycarHistory"><span></span>浏览历史<b>></b></li>
+		<li @click="Mycarfeedback"><span></span>用户反馈<b>></b></li>
+		<li @click="Mycarset"><span></span>设置<b>></b></li>
 	</ul>
-	<!--<p @click="goSet">我的车页</p>-->
-	<!--<router-link to="/MyCar/MyCarset">跳转</router-link>  -->
 	</pull-to>
 </div>	
 </template>
-
+	<!--<p @click="goSet">我的车页</p>-->
+	<!--<router-link to="/MyCar/MyCarset">跳转</router-link>  -->
 <script>
-	import Vue from 'vue'
-	import Vuex from 'vuex'
 	import PullTo from 'vue-pull-to'
 	import { XHeader } from 'vux'
-	/*var state = {
-    isLogin:0,          //初始时候给一个  isLogin=0  表示用户未登录
-	};
-	const mutations = {
-	    changeLogin(state,data){
-	        state.isLogin = data;
-	    }
-	
-	};
-	*/
-	
 	const config = {//上拉的名字
 	  pullText: '下拉', // 下拉时显示的文字
 	  triggerText: '释放更新', // 下拉到触发距离时显示的文字
@@ -65,23 +52,55 @@
 	  stayDistance: 50,
 	  triggerDistance: 70
 	}
+	/*console.log(this.$route.params.userID)*/
 	export default {
 		name:'MyCar',
 		data(){
 			return {
 				topConfig:config,
-				bottomConfig
+				bottomConfig,
+				isTrue:false,
+				isUser:true
 			}
 		},
 		components: {
 			XHeader,
 			 PullTo
 		},
+		mounted(){
+			if(this.$store.state.isLogin==0){
+				this.isTrue=false
+			}else{
+				this.isTrue=true
+				this.isUser=false
+			}
+		},
 		methods:{
 			goLanding:function(){
 				this.$router.push({path:"/MyCar/MyCarlanding"})
 			},
-			Mycar1:function(){
+			MycarSign:function(){
+				this.$router.push({path:"/MyCar/MycarSign"})
+			},
+			MycarShopping:function(){
+				this.$router.push({path:"/MyCar/MycarShopping"})
+			},
+			MycarCommunity:function(){
+				this.$router.push({path:"/MyCar/MycarCommunity"})
+			},
+			MycarDiscount:function(){
+				this.$router.push({path:"/MyCar/MycarDiscount"})
+			},
+			MycarCollection:function(){
+				this.$router.push({path:"/MyCar/MycarCollection"})
+			},
+			MycarHistory:function(){
+				this.$router.push({path:"/MyCar/MycarHistory"})
+			},
+			Mycarfeedback:function(){
+				this.$router.push({path:"/MyCar/Mycarfeedback"})
+			},
+			Mycarset:function(){
 				this.$router.push({path:"/MyCar/MyCarset"})
 			},
 			//上下拉刷新
@@ -92,14 +111,7 @@
 		        	//loaded('fail')//失败
 		        }, 2000);
 		     }
-
-		}/*,
-		mutations:{
-			 increment(state){
-			 this.$store.commit('changeLogin','100')	
-			 }
-			
-		}*/
+		}
 		
 	}
 </script>
@@ -151,5 +163,15 @@
 	}
 	.mycarul b{
 		float: right;
+	}
+	.macarimg{
+		display: none;
+	}
+	.macaruser{
+		display: none;
+	}
+	.macarus{
+		height: 100%;
+		background: #1498FD;
 	}
 </style>

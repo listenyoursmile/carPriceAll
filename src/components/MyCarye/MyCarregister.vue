@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<x-header :left-options="{showBack: isTrue}" class="carimg">账账号注册</x-header>
-		<div class="langbut">
-			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的手机号" /></li>
-			<li><input type="text" placeholder="请输入你的用密码" /></li>
-			<li><input type="text" placeholder="请输入你验证码" /></li>
-			<button>下一步</button>
+		<x-header :left-options="{showBack: isTrue}" class="carimg">账号注册</x-header>
+		<div class="registerbut">
+			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的手机号" v-model="userID"/></li>
+			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的用密码" v-model="password"/></li>
+			<li><input type="text" placeholder="请输入你验证码" v-model="code" class="maycarcode"/><span v-text="codeclick" @click="codeclick1"></span></li>
+			<button @click="register" class="nycarclick">下一步</button>
 		</div>
 		
 	</div>
@@ -17,14 +17,60 @@
 		name:'SecondCar',
 		data(){
 			return{
-				isTrue:true
+				isTrue:true,
+				userID:'',
+				password:'',
+				code:'',
+				codeclick:'点击获取验证码'
 			}
 		},
 		components: {
 			XHeader
 		},
+		mounted(){
+			
+		},
 		methods:{
-		
+			codeclick1:function(){
+				var code='';
+			        //首先默认code为空字符串
+			        //设置长度，这里看需求，我这里设置了4
+			        var codeLength = 4;
+			        //设置随机字符
+			        var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R', 'S','T','U','V','W','X','Y','Z');
+			        //循环codeLength 我设置的4就是循环4次
+			        for(var i = 0; i < codeLength; i++){
+			            //设置随机数范围,这设置为0 ~ 36
+			             var index = Math.floor(Math.random()*36);
+			             //字符串拼接 将每次随机的字符 进行拼接
+			             code += random[index];
+			        }
+				this.codeclick =code;
+			},
+			register:function(){
+				if(this.userID==''){
+					alert("输入用户名")
+				}else{
+					if(this.password==''){
+						alert("输入密码")
+					}else{
+						if(this.code==''||this.code!=this.codeclick){
+							alert('请输入正确验证码')
+						}else{
+							this.$http({
+							method:'post',
+				    		url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+				    		data:{status:'register',userID:this.userID,password:this.password}
+							}).then((data)=>{
+								console.log(data)
+								alert("注册成功")
+							  			this.$router.push({path:"/MyCar/MyCarlanding"})
+							   	})	
+						}
+						
+					}
+				}
+			}
 		}
 	}
 </script>
@@ -35,27 +81,38 @@
 		height: 1.5rem;
 		overflow: hidden;
 	}
-	.langbut{
+	.registerbut{
 		padding: 1rem 0.6rem;
 	}
-	.langbut li{
+	.registerbut li{
 		font-size: 0.4rem;
 		width: 100%;
 		height: 0.9rem;
 		
 		list-style:none;
 	}
-	.langbut input{
+	.registerbut input{
 		width: 100%;
 		border: none;
 		height: 100%;
 	}
-	.langbut button{
+	.registerbut .maycarcode{
+		width: 60%;
+	}
+	.registerbut .nycarclick{
 		display: block;
 		width: 100%;
 		height: 1.15rem;
 		background: #1d88eb;
 		margin: 1rem 0 0.72rem;
+	}
+	
+	.registerbut span{
+		display: inline-block;
+		height: 100%;
+		background: red;
+		color: #C1C1C1;
+		font-size: 0.5rem;
 	}
 	.langgo{
 		font-size: 0.4rem;
