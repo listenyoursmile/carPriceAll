@@ -1,19 +1,20 @@
 <template>
 <div class="mycartm">
 	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件使用的标签名-->
-	<div class="cartop" @click="goLanding">
-		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}"/>
-		<div v-bind:class="{macaruser:isUser}" class="macarus">
-			<p>{{myCarname}}</p>
+	<div class="cartop">
+		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}" @click="goLanding"/>
+		<div v-bind:class="{macaruser:isUser}" class="macarus" @click="myCarCenter">
+			<img src="../assets/images/mycar/2.jpg" class="mycarportrait"/>
+			<p>{{myCarname}}<br/>{{myCarautograph}}</p><span style="float: right;margin-top: 0.6rem;color: #eef6fe;">></span>
 		</div>
 	</div>
 	<p class="landorder">我的订单</p>
 	<div class="landfour">
-		<li><a href="/MyCar/MyCarlanding">买新车</a></li>
-		<li><a href="">今日疯抢</a></li>
-		<li><a href="">超值特惠</a></li>
-		<li><a href="">新车询价</a></li>
-		<li><a href="">新车贷款</a></li>
+		<li><router-link to="/MyCar/MyCarlanding">买新车</router-link></li>
+		<li><router-link to="/MyCar">今日疯抢</router-link></li>
+		<li><router-link to="/MyCar">超级特惠</router-link></li>
+		<li><router-link to="/MyCar">新车询价</router-link></li>
+		<li><router-link to="/MyCar">新车贷款</router-link></li>
 	</div>
 	
 	<ul class="mycarul">
@@ -63,6 +64,7 @@
 				bottomConfig,
 				isTrue:false,
 				isUser:true,
+				myCarautograph:this.$store.state.myCarautograph,
 				myCarname:this.$store.state.userID
 			}
 		},
@@ -105,6 +107,9 @@
 			},
 			Mycarset:function(){
 				this.$router.push({path:"/MyCar/MyCarset"})
+			},
+			myCarCenter:function(){
+				this.$router.push({path:"/MyCar/myCarCenter"})
 			},
 			//上下拉刷新
 			refresh:function(loaded) {
@@ -152,7 +157,7 @@
 	}
 	.landfour a{
 		font-size: 0.35rem;
-		color: #c1c1c1;
+		color: #9a9a9a;
 	}
 	.mycarul{
 		margin-top: 0.3rem;
@@ -162,7 +167,8 @@
 	.mycarul li{
 		height: 1.5rem;
 		line-height: 1.5rem;
-		
+		border-bottom: 1 solid #ccc;
+		color: #666666;
 	}
 	.mycarul b{
 		float: right;
@@ -174,7 +180,20 @@
 		display: none;
 	}
 	.macarus{
+		padding: 1rem 0.88rem;
 		height: 100%;
 		background: #1498FD;
+	}
+	.cartop .mycarportrait{
+		float: left;
+		width: 1.76rem;
+		height: 1.76rem;
+		border-radius: 50%;
+	}
+	.macarus p{
+		float: left;
+		font-size: 0.5rem;
+		color: #fff;
+		margin: 0.6rem 0 0.6rem 0.6rem;
 	}
 </style>

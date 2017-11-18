@@ -33,12 +33,14 @@ import MycarDiscount from './components/MyCarye/MycarDiscount'
 import MycarCollection from './components/MyCarye/MycarCollection'
 import MycarHistory from './components/MyCarye/MycarHistory'
 import Mycarfeedback from './components/MyCarye/Mycarfeedback'
+import myCarCenter from './components/MyCarye/myCarCenter'
 	Vue.use(Vuex);
 	//使用vuex的Store状态仓库设置全局
 	const store = new Vuex.Store({
 		state:{
 	    	isLogin:0,//初始时候给一个  isLogin=0  表示用户未登录
-			userID:''
+			userID:'',
+			myCarautograph:'没有任何签名'
 		},
 		mutations:{
 	    changeLogin(state,data){
@@ -190,6 +192,11 @@ const routes = [
 		name:'Mycarfeedback',
 		component: Mycarfeedback
 	},
+	{//个人中心
+		path: '/MyCar/myCarCenter',
+		name:'myCarCenter',
+		component: myCarCenter
+	}
 ]
 const router = new VueRouter({
   routes
