@@ -48,8 +48,9 @@
 			    		}
 				  		}).then((data,v)=>{
 				  			this.$router.push({name:'MyCar'})
-				  			localStorage.setItem('user2',this.userID)
-				   			this.$store.commit('changeLogin','100')
+				  			this.$store.state.userID=this.userID
+				  			console.log(this.$store.state.userID)
+				  			this.$store.commit('changeLogin','100')
 				   		})
 					}
 				}

@@ -3,7 +3,9 @@
 	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件使用的标签名-->
 	<div class="cartop" @click="goLanding">
 		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}"/>
-		<div v-bind:class="{macaruser:isUser}" class="macarus"></div>
+		<div v-bind:class="{macaruser:isUser}" class="macarus">
+			<p>{{myCarname}}</p>
+		</div>
 	</div>
 	<p class="landorder">我的订单</p>
 	<div class="landfour">
@@ -60,7 +62,8 @@
 				topConfig:config,
 				bottomConfig,
 				isTrue:false,
-				isUser:true
+				isUser:true,
+				myCarname:this.$store.state.userID
 			}
 		},
 		components: {

@@ -37,11 +37,13 @@ import Mycarfeedback from './components/MyCarye/Mycarfeedback'
 	//使用vuex的Store状态仓库设置全局
 	const store = new Vuex.Store({
 		state:{
-	    	isLogin:0,          //初始时候给一个  isLogin=0  表示用户未登录
+	    	isLogin:0,//初始时候给一个  isLogin=0  表示用户未登录
+			userID:''
 		},
 		mutations:{
 	    changeLogin(state,data){
 	        state.isLogin = data;
+	        
 	    }
 		}
 	})
