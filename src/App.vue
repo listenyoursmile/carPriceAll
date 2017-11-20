@@ -35,6 +35,9 @@ function getBrandList(){
 html{
 	font-size: 33.33px;
 }
+#app{
+	height: 100%;
+}
 
 body {
   background-color: #fbf9fe;

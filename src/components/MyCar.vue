@@ -1,7 +1,8 @@
 <template>
 <div class="mycartm">
-	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件使用的标签名-->
-	<div class="cartop">
+
+	<pull-to :top-load-method="refresh" :top-config="topConfig" :bottom-load-method="refresh" :bottom-config="bottomConfig"><!--插件标签名-->
+	<div class="cartop" @click="goLanding">
 		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}" @click="goLanding"/>
 		<div v-bind:class="{macaruser:isUser}" class="macarus" @click="myCarCenter">
 			<img src="../assets/images/mycar/2.jpg" class="mycarportrait"/>
