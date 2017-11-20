@@ -17,6 +17,5 @@ selenium-debug.log
  .postcssrc.js
   README.md
   build/
-  config/ 
-  static/
+  config/
   test/
