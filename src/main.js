@@ -25,7 +25,6 @@ import MyCar from './components/MyCar'
 import MyCarset from './components/MyCarye/MyCarset'
 import MyCarlanding from './components/MyCarye/MyCarlanding'
 import MyCarregisiter from './components/MyCarye/MyCarregister'
-
 import MycarCommunity from './components/MyCarye/MycarCommunity'
 import MycarSign from './components/MyCarye/MycarSign'
 import MycarShopping from './components/MyCarye/MycarShopping'
@@ -43,10 +42,9 @@ import myCarCenter from './components/MyCarye/myCarCenter'
 			myCarautograph:'没有任何签名'
 		},
 		mutations:{
-	    changeLogin(state,data){
-	        state.isLogin = data;
-	        
-	    }
+		    changeLogin(state,data){
+		        state.isLogin = data;
+		    }
 		}
 	})
 /*                                     分界限                               */
@@ -222,6 +220,6 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  router,store,
+  router, ,
   render: h => h(App)
 }).$mount('#app-box')
