@@ -2,7 +2,7 @@
 	<div>
 		<Headers>
 			<div slot="headers">
-				<span class="new_hs_left">上海</span>
+			
 				<div class="new_hs_right"><p style="line-height: 1.5rem;font-size: 0.5rem;font-weight: bold;padding-right: 1.5rem;">二手车</p></div>
 			</div>
 		</Headers>
