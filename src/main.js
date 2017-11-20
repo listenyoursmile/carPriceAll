@@ -152,8 +152,6 @@ const routes = [
 		path: '/Helpbuys',
 		name:'Helpbuys',
 		component: Helpbuys
-	}]
-
 	},
 	{//设置
 		path: '/MyCar/MyCarset',
@@ -212,6 +210,8 @@ const routes = [
 		path: '/MyCar/myCarCenter',
 		name:'myCarCenter',
 		component: myCarCenter
+	}]
+
 	}
 ]
 const router = new VueRouter({
