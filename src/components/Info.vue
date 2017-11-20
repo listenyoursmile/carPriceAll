@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="infomain">
 		<router-view></router-view>
 		<Footers></Footers>
 	</div>
@@ -8,12 +8,13 @@
 	import { Group,Cell } from 'vux'
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 	import Footers from '@/components/Footers'
+
 	
 	require('swiper/dist/css/swiper.css')
 	export default {
 		name:"Info",
 		components:{
-			swiper,swiperSlide,Group,Cell,Footers
+			swiper,swiperSlide,Group,Cell,Footers		
 		},
 		data () {
 	      return {
@@ -42,9 +43,12 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.box img{
 		height: 200px;
 		display: block;
+	}
+	.infomain{
+		height: 100%;
 	}
 </style>
