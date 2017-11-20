@@ -24,7 +24,7 @@
 				url:"/static/cityList.json"
 			}).then(data=>{
 				console.log(data.data)
-				let 
+//				let 
 			})
 			
 		}
