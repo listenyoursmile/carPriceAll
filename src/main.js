@@ -69,9 +69,9 @@ import Jump from './components/FindCarye/Jump'
 import Findactive from './components/FindCarye/Findactive'
 import Findactive2 from './components/FindCarye/Findactive2'
 
-//import Activejump from './components/FindCarye/Activejump'
-//import Findactivechild from './components/FindCarye/Findactivechild'
-//
+//NewCar
+import selectCity from './components/NewCar/selectCity'
+
 
 var zepto = require('n-zepto');
 
@@ -213,6 +213,7 @@ const routes = [
 	{//个人中心
 		path: '/MyCar/myCarCenter',
 		name:'myCarCenter',
+
 		component: myCarCenter,
 	},
 	{//修改昵称
@@ -224,6 +225,11 @@ const routes = [
 		path: '/MyCar/myCarCenter/myCarautog',
 		name:'myCarautog',
 		component: myCarautog
+	},
+	{//选择城市
+		path: '/NewCar/selectCity',
+		name:'selectCity',
+		component: selectCity
 	}
 ]
 const router = new VueRouter({

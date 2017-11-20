@@ -41,6 +41,7 @@ html{
 
 body {
   background-color: #fbf9fe;
+  font-family: "microsoft yahei";
 }
 *{
 	margin: 0;
