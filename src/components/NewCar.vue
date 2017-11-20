@@ -25,7 +25,7 @@
 			<ul class="clear">
 				<li>
 					<i class="iconfont icon-cheliangxuanzhong"></i>
-					<span>条件宣传</span>
+					<span>条件宣传1</span>
 				</li>
 				<li>
 					<i class="iconfont icon-xiaoliangpaixing"></i>
