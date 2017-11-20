@@ -6,7 +6,7 @@
 				<li v-for="i in code" class="second_select">{{i}}</li>
 			</ul>
 		</div>
-		<ul v-for="(items,index) in brandList">
+		<ul v-for="(items,index) in brandList" class="brand_ul">
 			<li :id="code[index]" :class="code[index]">{{code[index]}}</li>
 			<li v-for="item in items" class="brands">
 				<img :src="item.imgLogo" class="brandLogo" />
@@ -27,15 +27,13 @@
 		},
 		mounted(){
 		//按首字母获取品牌列表
-		console.log(1)
-		var iList = new Set()
+		var iList = new Set()	
 		  this.$http({
 				method:'get',
 				dataType:'json',
 				url:"/static/brandlist.json"
 			}).then((data)=>{
 				this.brandList = data.data;
-				console.log(data);
 				for(var i=0 ;i<26;i++){
 					let iCode = String.fromCharCode(65+i);
 					if(iCode==='E'||iCode==="I"||iCode==="U"||iCode==="V"){
@@ -52,10 +50,10 @@
 				var iH = $('.swiper-container').height()
 				if(scrollTop <= iH){
 					let iOpacity = scrollTop/iH
-					$('.headers').css('opacity',iOpacity)
+					$('.new_headers').css('opacity',iOpacity)
 //					console.log()
 				}else{
-					$('.headers').css('opacity',1)
+					$('.new_headers').css('opacity',1)
 				}
 			},
 			brandListStart(){
@@ -103,17 +101,17 @@
 	}
 	.sideList{
 		z-index: 100;
-		width: 20vw;
 		position: fixed;
 		right: 0px;
 		top: 14%;
+		color: #666;
 	}
 	.brandListNav{
-		padding-right: 10px;
 		text-align: right;
 	}
 	.brandListNav li{
-		line-height: 0.54rem;
+		padding-right: 6px;
+		line-height: 0.58rem;
 	}
 	.brands img{
 		float: left;
@@ -124,5 +122,27 @@
 		height: 30%;
 		shape-outside: ellipse(25% 10%);
 		-webkit-shape-outside: ellipse(14vw 12vw at 90% 50%)
+	}
+	.brand_ul{
+		background: #fff;
+		padding:0 0.45rem;
+	}
+	.brand_ul li{
+		font-size: 0.44rem;
+		line-height: 1.6rem;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.brand_ul li:first-child{
+		padding-top: 0.32rem;
+		line-height: 0.7rem;
+		font-size: 0.42rem;
+		color: #000;
+		/*font-weight: bold;*/
+		border-bottom: none;
+	}
+	.brand_ul li img{
+		width: 1.08rem;
+		margin-top: 0.25rem;
+		margin-right: 0.5rem;
 	}
 </style>
