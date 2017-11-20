@@ -55,6 +55,7 @@ import myCarCenter from './components/MyCarye/myCarCenter'
 //import iconFont from './iconfont/iconfont'
 import Helpbuys from './components/Helpbuys'
 import Helpsell from './components/Helpsell'
+import Brand from './components/Brand'
 
 require('./assets/iconfont/iconfont.css')
 
@@ -152,6 +153,10 @@ const routes = [
 		path: '/Helpbuys',
 		name:'Helpbuys',
 		component: Helpbuys
+	},{
+		path: '/Brand',
+		name: 'Brand',
+		component:Brand
 	},
 	{//设置
 		path: '/MyCar/MyCarset',

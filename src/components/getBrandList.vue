@@ -115,6 +115,13 @@
 	.brandListNav li{
 		line-height: 0.54rem;
 	}
+	.brands{
+		display: flex;
+		align-items: center;
+	}
+	.brands span{
+		margin-left: 0.5rem;
+	}
 	.brands img{
 		float: left;
 	}

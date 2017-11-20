@@ -25,7 +25,7 @@
 			</div>
 			<div class="second_content">
 				<ul class="second_select">
-					<li class="second_jump" @click="selectJup()"><i>品牌</i><span class="iconfont icon-xialajiantouxiangxia"></span></li>
+					<li class="second_jump" @click="selectJup()"><router-link to="/Brand"><i>品牌</i><span class="iconfont icon-xialajiantouxiangxia"></span></router-link></li>
 					<li class="second_jump" @click="selectJup()">
 						<i>价格</i><span class="iconfont icon-xialajiantouxiangxia"></span>
 						<div class="Price_sort" style="display: none;">
