@@ -48,11 +48,26 @@
 		</div>
 		<div class="new_recommend">
 			<p><i class="iconfont icon-like"></i>热门推荐</p>
-			<ul>
+			<ul class="new_recommend_list1">
 				<li><router-link to="/" v-for="data in nh_datalist">
-					<img v-bind:src="data.imgLogo"/>
-					{{data.brandName}}
-					<span>{{data.serieName}}</span>
+					<img src="../assets/images/newCar/logo1.png"/>
+					<span>斯柯达</span>
+				</router-link></li>
+				<li><router-link to="/" v-for="data in nh_datalist">
+					<img src="../assets/images/newCar/logo2.png"/>
+					<span>斯柯达</span>
+				</router-link></li>
+				<li><router-link to="/" v-for="data in nh_datalist">
+					<img src="../assets/images/newCar/logo3.png"/>
+					<span>斯柯达</span>
+				</router-link></li>
+				<li><router-link to="/" v-for="data in nh_datalist">
+					<img src="../assets/images/newCar/logo4.png"/>
+					<span>斯柯达</span>
+				</router-link></li>
+				<li><router-link to="/" v-for="data in nh_datalist">
+					<img src="../assets/images/newCar/logo5.png"/>
+					<span>斯柯达</span>
 				</router-link></li>
 			</ul>
 			<ul>
@@ -211,6 +226,9 @@
 		line-height: 0.46rem;
 		padding: 0 0.15rem;
 		margin: 0 8px 0 10px;
+	}
+	.new_recommend_list1 li{
+		float: left;
 	}
 	
 	.new_recommend>p{

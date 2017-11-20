@@ -8,8 +8,8 @@
 		</div>
 		<ul v-for="(items,index) in brandList">
 			<li :id="code[index]" :class="code[index]">{{code[index]}}</li>
-			<li v-for="item in items">
-				<img :src="item.imgLogo" class="brandLogo" /> 
+			<li v-for="item in items" class="brands">
+				<img :src="item.imgLogo" class="brandLogo" />
 				<span class="brandName">{{item.brandName}}</span>
 			</li>
 		</ul>
@@ -100,12 +100,6 @@
 	ul li{
 		overflow: hidden;
 	}
-	.brandLogo{
-		float: left;
-	}
-	.brandName{
-		float: left;
-	}
 	.sideList{
 		z-index: 100;
 		width: 20vw;
@@ -119,6 +113,9 @@
 	}
 	.brandListNav li{
 		line-height: 0.54rem;
+	}
+	.brands img{
+		float: left;
 	}
 	.shapeOutside{
 		float: right;
