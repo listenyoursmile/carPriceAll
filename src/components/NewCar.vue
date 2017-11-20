@@ -3,15 +3,15 @@
 		<Headers>
 		</Headers>
 		<div class="header">
-					<span class="new_hs_left">上海</span>
-					<div class="new_hs_right">
-						<p class="new_ser">
-							<i class="iconfont icon-search"></i><span>名爵6</span>
-						</p>
-						<i class="iconfont icon-duihua"></i>
-						<i class="iconfont icon-iconzhaoxiangji"></i>
-					</div>
-				</div>
+			<span class="new_hs_left">上海</span>
+			<div class="new_hs_right">
+				<p class="new_ser">
+					<i class="iconfont icon-search"></i><span>名爵6</span>
+				</p>
+				<i class="iconfont icon-duihua"></i>
+				<i class="iconfont icon-iconzhaoxiangji"></i>
+			</div>
+		</div>
 		
 		<div class="new_banner">
 			<swiper>

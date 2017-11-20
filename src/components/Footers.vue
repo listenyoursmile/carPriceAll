@@ -18,7 +18,7 @@
 
 	      <tabbar-item link="/HelpCar">
 	        <img slot="icon" src="../assets/images/footer-4.png">
-	        <span slot="label">帮买车</span>
+	        <span slot="label">社区</span>
 
 	      </tabbar-item>
 	      <tabbar-item link="/MyCar">

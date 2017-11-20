@@ -4,12 +4,12 @@
 			帮您卖车
 		</x-header>
 		<div class="helpsell_content">
-			<flexbox style="position: fixed;bottom: 2rem; width: 86%;margin:0 auto;">
+			<flexbox style="position: fixed;bottom: 1rem; width: 86%;left: 50%;margin-left: -43%;">
 		        <flexbox-item>
-		          <x-button type="primary">primary</x-button>
+		          <x-button type="primary" style="font-size: 0.44rem;">天天拍车卖高价</x-button>
 		        </flexbox-item>
 		        <flexbox-item>
-		          <x-button type="warn">Delete</x-button>
+		          <x-button type="warn" style="font-size: 0.44rem;">自己网上卖</x-button>
 		        </flexbox-item>
 		    </flexbox>
 		</div>
