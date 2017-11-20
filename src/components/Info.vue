@@ -1,18 +1,20 @@
 <template>
 	<div class="infomain">
 		<router-view></router-view>
+		<Footers></Footers>
 	</div>
 </template>
 <script>
 	import { Group,Cell } from 'vux'
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
+	import Footers from '@/components/Footers'
 
 	
 	require('swiper/dist/css/swiper.css')
 	export default {
 		name:"Info",
 		components:{
-			swiper,swiperSlide,Group,Cell
+			swiper,swiperSlide,Group,Cell,Footers		
 		},
 		data () {
 	      return {

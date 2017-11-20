@@ -104,14 +104,6 @@ const routes = [
 			name: 'SecondCar',
 			component:SecondCar
 		},{
-			path: '/Helpbuys',
-			name:'Helpbuys',
-			component: Helpbuys
-		},{
-			path: '/Helpsell',
-			name:'Helpsell',
-			component: Helpsell
-		},{
 			path: '/FindCar',
 			name: 'FindCar',
 			component:FindCar,
@@ -152,6 +144,14 @@ const routes = [
 			name: 'MyCar',
 			component:MyCar
 		}]
+	},{
+		path: '/Helpsell',
+		name:'Helpsell',
+		component: Helpsell
+	},{
+		path: '/Helpbuys',
+		name:'Helpbuys',
+		component: Helpbuys
 	}]
 
 	},

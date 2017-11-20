@@ -70,7 +70,6 @@
 				</ul>
 			</v-scroll>
 		</div>
-		<Footers></Footers>
 		</div>
 	</div>
 </template>
@@ -79,15 +78,12 @@
 	import { XHeader } from 'vux'
 	import Headers from '@/components/Headers'
 	import Scol from '@/components/Scol'
-	import Footers from '@/components/Footers'
-	
 	
 	export default{
 		name:'SecondCar',
 		components:{
 			Headers,XHeader,
-			'v-scroll': Scol,
-			Footers
+			'v-scroll': Scol
 		},
 		data(){
 			return {

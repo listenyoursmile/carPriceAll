@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<x-header :left-options="{backText: ''}" class="headerson">
+		<x-header :left-options="{backText: ''}" class="headerson" fixed>
 			<a slot="right">分享</a>
 			帮买车
 		</x-header>
@@ -88,6 +88,10 @@
 </script>
 
 <style scoped>
+	.vux-header{
+		position: fixed;
+		width: 100%;
+	}
 	.second_footer{
 		text-align: center;
 		margin: 0.6rem 0;
@@ -133,6 +137,9 @@
 	}
 	.vux-header-title{
 		color: #3e3e3e !important;
+	}
+	.helpcar_content{
+		padding-top: 1.3rem;
 	}
 	.helpcar_content .helpcar_banner img{
 		width: 100%;
