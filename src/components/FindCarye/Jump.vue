@@ -1,13 +1,14 @@
 <template>
 	<div>
-	    <Headers>		
-			<div slot="headers">		   	
+		<Headers>
+			<div slot="headers">
+			
+				<div class="new_hs_right"><p style="line-height: 1.5rem;font-size: 0.5rem;font-weight: bold;padding-right: 1.5rem;">二手车</p></div>
 			</div>
 		</Headers>
-		<p><img src="../../assets/images/findcar/f1.jpg" class="top_photo"/></p>
+	   
+		<p class="top_photo"><img src="../../assets/images/findcar/f1.jpg" /></p>
 		<div class="find_huo">
-			
-		
 			<router-link to="/FindCar/Findactive">
 				<div class="huo_tital huo_one">
 					<img src="../../assets/images/findcar/f2.png"/>
@@ -214,13 +215,15 @@
 	
 </script>
 <style>
+	.headers{opacity: 1 !important;z-index: 10;top:0;}
 	/*头部*/
-	.top_photo{height:3.2rem;}
-	.find_huo{width: 100%;background: #f6f6f6;overflow: hidden;font-size: 0.2rem;}
-	.find_huo .huo_tital{width:45%;float: left;background: #fff;height: 2rem;}
-	.find_huo .huo_tital img{width: 30%;float: left;margin-right: 4px;margin:10% 5%;}
+	.top_photo{height:3.2rem;width: 100%;overflow: hidden;margin-top: 1.5rem;}
+	.top_photo img{height:3.2rem;width: 100%;}
+	.find_huo{width: 95%;background: #f6f6f6;overflow: hidden;font-size: 0.2rem;overflow: hidden;padding-left: 5%;}
+	.find_huo .huo_tital{width:45%;float: left;background: #fff;height: 2rem;overflow: hidden;}
+	.find_huo .huo_tital img{width: 30%;float: left;margin-right: 4px;margin-top:5%;}
 	.find_huo .huo_tital p{float:left;width: 50%;}
-	.find_huo .huo_tital p b{display: block;margin-top:12%;}
+	.find_huo .huo_tital p b{display: block;margin-top:15%;}
 	.find_huo .huo_tital p i{width:100%;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;height:0.5rem;display: inline-block;}
 	
 	.find_huo .huo_one{margin-right:4%;}
