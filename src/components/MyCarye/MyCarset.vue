@@ -14,7 +14,7 @@
 		},
 		data(){
 			return {
-			isTrue:false	
+			isTrue:true	
 			}
 		
 		},
@@ -25,7 +25,14 @@
 				this.$store.commit('changeLogin','0')
 				this.isTrue=true
 			}
-		}
+		},
+		mounted(){
+			if(this.$store.state.isLogin==0){
+				this.isTrue=true
+			}else{
+				this.isTrue=false
+			}
+		},
 	}
 </script>
 <style>
