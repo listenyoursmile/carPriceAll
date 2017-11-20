@@ -179,6 +179,10 @@
 	}
 </script>
 <style scoped>
+	.headers{
+		opacity: 1 !important;
+		z-index: 10;
+	}
 	.secondcar{
 		height: 100%;
 	}
