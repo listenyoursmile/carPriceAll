@@ -49,26 +49,27 @@
 		<div class="new_recommend">
 			<p><i class="iconfont icon-like"></i>热门推荐</p>
 			<ul class="new_recommend_list1">
-				<li><router-link to="/" v-for="data in nh_datalist">
+				<li><router-link to="/">
 					<img src="../assets/images/newCar/logo1.png"/>
-					<span>斯柯达</span>
+					<p>斯柯达</p>
 				</router-link></li>
-				<li><router-link to="/" v-for="data in nh_datalist">
+				<li><router-link to="/">
 					<img src="../assets/images/newCar/logo2.png"/>
-					<span>斯柯达</span>
+					<p>斯柯达</p>
 				</router-link></li>
-				<li><router-link to="/" v-for="data in nh_datalist">
+				<li><router-link to="/">
 					<img src="../assets/images/newCar/logo3.png"/>
-					<span>斯柯达</span>
+					<p>斯柯达</p>
 				</router-link></li>
-				<li><router-link to="/" v-for="data in nh_datalist">
+				<li><router-link to="/">
 					<img src="../assets/images/newCar/logo4.png"/>
-					<span>斯柯达</span>
+					<p>斯柯达</p>
 				</router-link></li>
-				<li><router-link to="/" v-for="data in nh_datalist">
+				<li><router-link to="/">
 					<img src="../assets/images/newCar/logo5.png"/>
-					<span>斯柯达</span>
+					<p>斯柯达</p>
 				</router-link></li>
+				
 			</ul>
 			<ul>
 				<li><router-link to="/">
@@ -81,6 +82,7 @@
 		</brandList>
 		<router-view></router-view>
 	</div>
+	
 </template>
 
 <script>
@@ -120,7 +122,7 @@
 		z-index: 10;
 	}
 	.header{
-		z-index: 11;
+		z-index: 110;
 		height: 1.5rem;
 		width: 100%;
 		background-size: cover;
@@ -227,21 +229,41 @@
 		padding: 0 0.15rem;
 		margin: 0 8px 0 10px;
 	}
-	.new_recommend_list1 li{
-		float: left;
-	}
 	
+	.new_recommend{
+		background: #fff;
+		overflow: hidden;
+	}
 	.new_recommend>p{
 		font-weight: bold;
 		color: #454545;
 		font-size: 0.4rem;
+		margin: 0.4rem 0 0.4rem 0.45rem;
 	}
 	.new_recommend>p i{
+		float: left;
+		display: block;
 		width: 0.48rem;
 		height: 0.48rem;
+		line-height: 0.48rem;
+		text-align: center;
 		font-size: 0.36rem;
 		color: #fff;
 		background: #1d88eb;
 		border-radius: 50%;
 	}
+	.new_recommend_list1 li{
+		float: left;
+		width: 20%;
+		text-align: center;
+		color: 6e6e6e;
+	}
+	.new_recommend_list1 li img{
+		width: 1.03rem;
+		display: inline-block;
+	}
+	.new_recommend_list1 li p{
+		color: #666;
+	}
+	
 </style>
