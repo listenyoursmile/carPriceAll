@@ -1,17 +1,18 @@
 <template>
 	<div>
 		<Headers>
-			<div slot="headers">
-				<span class="new_hs_left">上海</span>
-				<div class="new_hs_right">
-					<p class="new_ser">
-						<i class="iconfont icon-search"></i><span>名爵6</span>
-					</p>
-					<i class="iconfont icon-duihua"></i>
-					<i class="iconfont icon-iconzhaoxiangji"></i>
-				</div>
-			</div>
 		</Headers>
+		<div class="header">
+					<span class="new_hs_left">上海</span>
+					<div class="new_hs_right">
+						<p class="new_ser">
+							<i class="iconfont icon-search"></i><span>名爵6</span>
+						</p>
+						<i class="iconfont icon-duihua"></i>
+						<i class="iconfont icon-iconzhaoxiangji"></i>
+					</div>
+				</div>
+		
 		<div class="new_banner">
 			<swiper>
 				<swiper-slide><img src="../assets/images/banner1.jpg" width="100%"/></swiper-slide>
@@ -24,7 +25,7 @@
 			<ul class="clear">
 				<li>
 					<i class="iconfont icon-cheliangxuanzhong"></i>
-					<span>条件宣传</span>
+					<span>条件宣传1</span>
 				</li>
 				<li>
 					<i class="iconfont icon-xiaoliangpaixing"></i>
@@ -47,12 +48,28 @@
 		</div>
 		<div class="new_recommend">
 			<p><i class="iconfont icon-like"></i>热门推荐</p>
-			<ul>
-				<li><router-link to="/" v-for="data in nh_datalist">
-					<img v-bind:src="data.imgLogo"/>
-					{{data.brandName}}
-					<span>{{data.serieName}}</span>
+			<ul class="new_recommend_list1">
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/logo1.png"/>
+					<p>斯柯达</p>
 				</router-link></li>
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/logo2.png"/>
+					<p>斯柯达</p>
+				</router-link></li>
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/logo3.png"/>
+					<p>斯柯达</p>
+				</router-link></li>
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/logo4.png"/>
+					<p>斯柯达</p>
+				</router-link></li>
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/logo5.png"/>
+					<p>斯柯达</p>
+				</router-link></li>
+				
 			</ul>
 			<ul>
 				<li><router-link to="/">
@@ -65,6 +82,7 @@
 		</brandList>
 		<router-view></router-view>
 	</div>
+	
 </template>
 
 <script>
@@ -99,6 +117,19 @@
 </script>
 
 <style>
+	.headers{
+		opacity: 0;
+		z-index: 10;
+	}
+	.header{
+		z-index: 110;
+		height: 1.5rem;
+		width: 100%;
+		background-size: cover;
+		color: #fff;
+		text-align: center;
+		position: fixed;
+	}
 	.clear{
 		overflow: hidden;
 	}
@@ -136,6 +167,9 @@
 		margin-right: 0.4rem;
 		font-weight: bolder;
 		font-size: 0.55rem;
+	}
+	.new_banner .swiper-container{
+		height: 4.05rem;
 	}
 	
 	.new_nav{
@@ -196,17 +230,40 @@
 		margin: 0 8px 0 10px;
 	}
 	
+	.new_recommend{
+		background: #fff;
+		overflow: hidden;
+	}
 	.new_recommend>p{
 		font-weight: bold;
 		color: #454545;
 		font-size: 0.4rem;
+		margin: 0.4rem 0 0.4rem 0.45rem;
 	}
 	.new_recommend>p i{
+		float: left;
+		display: block;
 		width: 0.48rem;
 		height: 0.48rem;
+		line-height: 0.48rem;
+		text-align: center;
 		font-size: 0.36rem;
 		color: #fff;
 		background: #1d88eb;
 		border-radius: 50%;
 	}
+	.new_recommend_list1 li{
+		float: left;
+		width: 20%;
+		text-align: center;
+		color: 6e6e6e;
+	}
+	.new_recommend_list1 li img{
+		width: 1.03rem;
+		display: inline-block;
+	}
+	.new_recommend_list1 li p{
+		color: #666;
+	}
+	
 </style>

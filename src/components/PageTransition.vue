@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pagetransition">
   <transition :name="transitionName">
     <router-view class="child-view" @to-parent="getChild"></router-view>
   </transition>
@@ -33,6 +33,9 @@
 </script>
 
 <style scoped>
+	.pagetransition{
+		height: 100%;
+	}
   .child-view {
   width:100%;
   transition: all .8s cubic-bezier(.55,0,.1,1);

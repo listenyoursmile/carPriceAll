@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div  class="hellofromvux">
 		<!--<x-header :left-options="{showBack: isTrue}">do not show Back</x-header>-->
 		<router-view @to-parent="getchild"></router-view>
 	</div>
@@ -29,6 +29,9 @@ export default {
 <style>
 .vux-demo {
   text-align: center;
+}
+.hellofromvux {
+	height: 100%;
 }
 .logo {
   width: 100px;

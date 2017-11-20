@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
+import $ from 'n-zepto'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
@@ -49,6 +50,9 @@ import myCarCenter from './components/MyCarye/myCarCenter'
 	})
 /*                                     分界限                               */
 //import iconFont from './iconfont/iconfont'
+import Helpbuys from './components/Helpbuys'
+import Helpsell from './components/Helpsell'
+
 require('./assets/iconfont/iconfont.css')
 
 import PageTransition from './components/PageTransition'
@@ -64,8 +68,12 @@ import Findactive2 from './components/FindCarye/Findactive2'
 //import Findactivechild from './components/FindCarye/Findactivechild'
 //
 
+var zepto = require('n-zepto');
+
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
+Vue.use(Vuex);
+Vue.use(zepto);
 
 
 const routes = [
@@ -92,7 +100,6 @@ const routes = [
 			path: '/SecondCar',
 			name: 'SecondCar',
 			component:SecondCar
-			
 		},{
 			path: '/FindCar',
 			name: 'FindCar',
@@ -134,6 +141,14 @@ const routes = [
 			name: 'MyCar',
 			component:MyCar
 		}]
+	},{
+		path: '/Helpsell',
+		name:'Helpsell',
+		component: Helpsell
+	},{
+		path: '/Helpbuys',
+		name:'Helpbuys',
+		component: Helpbuys
 	}]
 
 	},
@@ -220,6 +235,6 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  router, ,
+  router,store,
   render: h => h(App)
 }).$mount('#app-box')
