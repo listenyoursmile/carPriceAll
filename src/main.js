@@ -26,8 +26,6 @@ import MyCar from './components/MyCar'
 import MyCarset from './components/MyCarye/MyCarset'
 import MyCarlanding from './components/MyCarye/MyCarlanding'
 import MyCarregisiter from './components/MyCarye/MyCarregister'
-
-
 import MycarCommunity from './components/MyCarye/MycarCommunity'
 import MycarSign from './components/MyCarye/MycarSign'
 import MycarShopping from './components/MyCarye/MycarShopping'
@@ -36,19 +34,23 @@ import MycarCollection from './components/MyCarye/MycarCollection'
 import MycarHistory from './components/MyCarye/MycarHistory'
 import Mycarfeedback from './components/MyCarye/Mycarfeedback'
 import myCarCenter from './components/MyCarye/myCarCenter'
+import myCarname1 from './components/MyCarye/myCarname'
+import myCarautog from './components/MyCarye/mycarautograph'
 	Vue.use(Vuex);
 	//使用vuex的Store状态仓库设置全局
 	const store = new Vuex.Store({
 		state:{
 	    	isLogin:0,//初始时候给一个  isLogin=0  表示用户未登录
 			userID:'',
-			myCarautograph:'没有任何签名'
+			myCarautograph:'没有任何签名',
+			mylevocar:'请选择',
+			autograph:'未填写',
+			mytime:'请设置'
 		},
 		mutations:{
-	    changeLogin(state,data){
-	        state.isLogin = data;
-	        
-	    }
+		    changeLogin(state,data){
+		        state.isLogin = data;
+		    }
 		}
 	})
 /*                                     分界限                               */
@@ -212,7 +214,18 @@ const routes = [
 	{//个人中心
 		path: '/MyCar/myCarCenter',
 		name:'myCarCenter',
-		component: myCarCenter
+
+		component: myCarCenter,
+	},
+	{//修改昵称
+		path: '/MyCar/myCarCenter/myCarname',
+		name:'myCarname1',
+		component: myCarname1
+	},
+	{//修改个性签名
+		path: '/MyCar/myCarCenter/myCarautog',
+		name:'myCarautog',
+		component: myCarautog
 	},
 	{//选择城市
 		path: '/NewCar/selectCity',

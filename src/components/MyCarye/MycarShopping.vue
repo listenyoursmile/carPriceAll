@@ -16,10 +16,4 @@
 </script>
 
 <style>
-.carimg{
-		background: url(../../assets/images/header-bg.jpg);
-		background-size:cover;
-		height: 1.5rem;
-		overflow: hidden;
-	}
 </style>
