@@ -5,8 +5,10 @@
 		<div @click="myCarname">
 			<cell title="昵称" :value="myCarname1" is-link ></cell>
 		</div>
-
+		<popup-picker title="性别" placeholder="无" :data="list" v-model="value6" value-text-align="right"></popup-picker>
+		
       	<datetime v-model="value1" :title="briday" id="mydatetime" @on-change='change'></datetime>
+      	
 
 		<div><cell title="我的爱车" :value="mylevocar" is-link></cell></div>
 
@@ -16,14 +18,15 @@
 </template>
 
 <script>
-	import { XHeader,Datetime, Group,Cell } from 'vux'
+	import { XHeader,Datetime, Group,Cell,PopupPicker } from 'vux'
 	export default{
 		name:'myCarCenter',
 		components:{
 			XHeader,
 			Datetime,
 			Group,
-			Cell
+			Cell,
+			PopupPicker
 		},
 		data(){
 			return {
@@ -31,7 +34,9 @@
 				briday:'生日',
 				myCarname1:this.$store.state.userID,
 				mylevocar:this.$store.state.mylevocar,
-				autograph:this.$store.state.myCarautograph
+				autograph:this.$store.state.myCarautograph,
+				value6:['男'],
+				 list: [['男', '女', '暂不选择']]
 			}
 			
 		},
