@@ -1,9 +1,7 @@
 <template>
-	
-	<div>
-		<!--<img src="../../assets/images/findcar/faa1.png" alt="" />-->
-	<!--	<router-link to="/FindCar/Findactive/Findactivechild"></router-link>-->
+	<div>	
 		<p>hhahaha</p>
+		<p>hhaha</p>
 	</div>
 </template>
 

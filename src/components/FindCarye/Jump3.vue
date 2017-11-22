@@ -3,16 +3,22 @@
 		<x-header class="carimg">游戏广场</x-header>
 		<ul class="active-list">
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa7.png"/></b>
 			    <p>活动</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa8.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa9.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			
 		</ul>

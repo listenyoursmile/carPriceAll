@@ -1,49 +1,46 @@
 <template>
 	<div>
-		<router-view></router-view>	  
-	</div>
-</template>
-
-<script>
-</script>
-
-<style>
-</style>
-
-<!--<template>
-	<div>
 		 <x-header class="carimg">
 		 	发现
 		 </x-header>
 		<ul class="active-list">
 			
 			<li>
-				<router-link to="/FindCarye/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa1.png"/></b>
-			    <p>活动</p>
+				<router-link to="/Findactive/Findactivechild">
+					<b><img src="../../assets/images/findcar/fa1.png"/></b>
+				    <p>活动</p>
 			    </router-link>
-			    <router-view></router-view>
 			</li>
 			
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa2.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa3.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa4.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa5.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../assets/images/findcar/fa6.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 		</ul> 		
 	</div>
@@ -77,4 +74,4 @@
 	.active-list li img{width: 100%;height:3rem;}
 	.active-list li p{background: #fff;height:0.8rem;line-height: 0.8rem;text-indent: 2%;color: #cdcdcd;}
 	.active-list li:first-child{padding: 0;}
-</style>-->
+</style>

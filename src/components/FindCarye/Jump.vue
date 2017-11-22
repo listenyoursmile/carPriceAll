@@ -106,13 +106,15 @@
 		</div>
 		<div class="find_server">
 			<p>买车服务</p>
-			<div class="server_title">
-				<img src="../../assets/images/findcar/28.png"/>
-				<p>
-					<i>奔驰汽车</i>
-					<i>值得拥有</i>
-				</p>
-			</div>
+			<router-link to="/FindCar/Benchi">
+				<div class="server_title">
+					<img src="../../assets/images/findcar/28.png"/>
+					<p>
+						<i>奔驰汽车</i>
+						<i>值得拥有</i>
+					</p>
+				</div>
+			</router-link>	
 		    <ul class="server_choose">
 				       	   <li>
 				       	   	   <b><img src="../../assets/images/findcar/f12.png"/></b>
