@@ -25,8 +25,10 @@
 		<div class="new_nav clear">
 			<ul class="clear">
 				<li>
-					<i class="iconfont icon-cheliangxuanzhong"></i>
-					<span>条件宣传</span>
+					<router-link to="/NewCar/selectCar">
+						<i class="iconfont icon-cheliangxuanzhong"></i>
+						<span>条件选车</span>
+					</router-link>
 				</li>
 				<li>
 					<i class="iconfont icon-xiaoliangpaixing"></i>
@@ -37,8 +39,10 @@
 					<span>汽车资讯</span>
 				</li>
 				<li>
-					<i class="iconfont icon-chebiguize"></i>
-					<span>贷款买车</span>
+					<router-link to="/NewCar/newLoan">
+						<i class="iconfont icon-chebiguize"></i>
+						<span>贷款买车</span>
+					</router-link>
 				</li>
 				<li>
 					<i class="iconfont icon-fengqiangbaokuan"></i>
