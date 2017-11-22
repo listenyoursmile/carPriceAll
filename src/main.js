@@ -71,13 +71,14 @@ import Findactive2 from './components/FindCarye/Findactive2'
 
 //NewCar
 import selectCity from './components/NewCar/selectCity'
+import selectCar from './components/NewCar/selectCar'
+import newLoan from './components/NewCar/newLoan'
 
 
 var zepto = require('n-zepto');
 
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
-Vue.use(Vuex);
 Vue.use(zepto);
 
 
@@ -230,6 +231,16 @@ const routes = [
 		path: '/NewCar/selectCity',
 		name:'selectCity',
 		component: selectCity
+	},
+	{//条件选车
+		path: '/NewCar/selectCar',
+		name:'selectCar',
+		component: selectCar
+	},
+	{//贷款买车
+		path: '/NewCar/newLoan',
+		name:'newLoan',
+		component: newLoan
 	}
 ]
 const router = new VueRouter({
