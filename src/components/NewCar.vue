@@ -4,7 +4,7 @@
 			
 		</div>
 		<div class="new_header">
-					<router-link to="/NewCar/selectCity"><span class="new_hs_left">上海</span></router-link>
+					<router-link to="/NewCar/selectCity"><span class="new_hs_left">{{address}}</span></router-link>
 					<div class="new_hs_right">
 						<p class="new_ser">
 							<i class="iconfont icon-search"></i><span>名爵6</span>
@@ -112,7 +112,8 @@
 		},
 		data(){
 			return {
-				nh_datalist:[]
+				nh_datalist:[],
+				address:this.$store.state.address
 			}
 		},
 	    mounted(){

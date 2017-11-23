@@ -45,7 +45,8 @@ import myCarautog from './components/MyCarye/mycarautograph'
 			myCarautograph:'没有任何签名',
 			mylevocar:'请选择',
 			autograph:'未填写',
-			mytime:'请设置'
+			mytime:'请设置',
+			address:"上海"
 		},
 		mutations:{
 		    changeLogin(state,data){

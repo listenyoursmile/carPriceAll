@@ -2,7 +2,7 @@
 	<div>
 		<x-header class="carimg">设置</x-header>
 		<group>
-			<div><cell title="购车地区" value="上海" is-link></cell></div>
+			<div @click="selectCity1"><cell title="购车地区" :value="selectCity" is-link></cell></div>
 			<div><cell title="消息推送" value="汽车头条，摇号查询，专家专区" is-link></cell></div>
 		</group>
 		<group gutter="0.6rem">
@@ -30,16 +30,19 @@
 		},
 		data(){
 			return {
-			isTrue:true	
+			isTrue:true	,
+			selectCity:this.$store.state.address
 			}
 		
 		},
 		methods:{
-			
 			//退出登陆
 			quit:function(){
 				this.$store.commit('changeLogin','0')
 				this.isTrue=true
+			},
+			selectCity1:function(){
+				this.$router.push({path:"/NewCar/selectCity"})
 			}
 		},
 		mounted(){
