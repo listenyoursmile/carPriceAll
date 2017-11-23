@@ -12,6 +12,19 @@
 				<i class="iconfont icon-iconzhaoxiangji"></i>
 			</div>
 		</div>
+		<div class="new_headers">
+			
+		</div>
+		<div class="new_header">
+					<router-link to="/NewCar/selectCity"><span class="new_hs_left">上海</span></router-link>
+					<div class="new_hs_right">
+						<p class="new_ser">
+							<i class="iconfont icon-search"></i><span>名爵6</span>
+						</p>
+						<i class="iconfont icon-duihua"></i>
+						<i class="iconfont icon-iconzhaoxiangji"></i>
+					</div>
+			</div>
 		
 		<div class="new_banner">
 			<swiper>
@@ -25,7 +38,7 @@
 			<ul class="clear">
 				<li>
 					<i class="iconfont icon-cheliangxuanzhong"></i>
-					<span>条件宣传1</span>
+					<span>条件宣传</span>
 				</li>
 				<li>
 					<i class="iconfont icon-xiaoliangpaixing"></i>
@@ -71,9 +84,18 @@
 				</router-link></li>
 				
 			</ul>
-			<ul>
+			<ul class="new_recommend_list2">
 				<li><router-link to="/">
-					
+					<img src="../assets/images/newCar/car1.jpg"/>
+					<p>哈弗H6</p>
+				</router-link></li>
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/car1.jpg"/>
+					<p>锐界</p>
+				</router-link></li>
+				<li><router-link to="/">
+					<img src="../assets/images/newCar/car1.jpg"/>
+					<p>森雅R7</p>
 				</router-link></li>
 			</ul>
 		</div>
@@ -117,11 +139,18 @@
 </script>
 
 <style>
-	.headers{
+	.new_headers{
+		background: url(../assets/images/header-bg.jpg);
 		opacity: 0;
-		z-index: 10;
+		z-index: 100;
+		width: 100%;
+		height: 1.5rem;
+		background-size: cover;
+		color: #fff;
+		text-align: center;
+		position: fixed;
 	}
-	.header{
+	.new_header{
 		z-index: 110;
 		height: 1.5rem;
 		width: 100%;
@@ -153,6 +182,7 @@
 		font-size: 0.44rem;
 		line-height: 1.5rem;
 		height: 1.5rem;
+		color: #fff;
 		width: 17%;
 	}
 	.new_hs_right{
@@ -177,6 +207,8 @@
 		margin-bottom: 0.3rem;
 	}
 	.new_nav ul{
+		width: 95%;
+		padding-right: 5%;
 		padding: 0.35rem 0 0.12rem;
 		/*margin-bottom: ;*/
 	}
@@ -233,6 +265,9 @@
 	.new_recommend{
 		background: #fff;
 		overflow: hidden;
+		width: 95%;
+		padding-right: 5%;
+		margin-bottom: 0.3rem;
 	}
 	.new_recommend>p{
 		font-weight: bold;
@@ -267,3 +302,19 @@
 	}
 	
 </style>
+=======
+	.new_recommend_list2 li{
+		margin: 0.55rem 0 0.3rem;
+		width: 33.3%;
+		float: left;
+		text-align: center;
+	}
+	.new_recommend_list2 li img{
+		display: inline-block;
+		width: 80%;
+	}
+	.new_recommend_list2 li p{
+		color: #666;
+	}
+</style>
+>>>>>>> branch 'master' of https://github.com/listenyoursmile/carPriceAll.git

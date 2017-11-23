@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 import $ from 'n-zepto'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
+
 import App from './App'
 import Info from './components/Info'
 import Detail from './components/Detail'
@@ -37,6 +38,7 @@ import MycarHistory from './components/MyCarye/MycarHistory'
 import Mycarfeedback from './components/MyCarye/Mycarfeedback'
 import myCarCenter from './components/MyCarye/myCarCenter'
 	Vue.use(Vuex);
+
 	//使用vuex的Store状态仓库设置全局
 	const store = new Vuex.Store({
 		state:{
@@ -68,9 +70,9 @@ import Jump from './components/FindCarye/Jump'
 import Findactive from './components/FindCarye/Findactive'
 import Findactive2 from './components/FindCarye/Findactive2'
 
-//import Activejump from './components/FindCarye/Activejump'
-//import Findactivechild from './components/FindCarye/Findactivechild'
-//
+//NewCar
+import selectCity from './components/NewCar/selectCity'
+
 
 var zepto = require('n-zepto');
 
@@ -96,11 +98,6 @@ const routes = [
 		  	component: NewCar
 		  	
 		},{
-			path: '/Detail/:seriesRecordId',
-			name:'Detail',
-		  	component: Detail
-		  	
-		},{
 			path: '/SecondCar',
 			name: 'SecondCar',
 			component:SecondCar
@@ -117,18 +114,7 @@ const routes = [
 			 {
 			   path: '/FindCar/Findactive',
 			   name:'Findactive',
-			   component: Findactive,
-//			   children:[
-//			   {
-//			   	   path:'/Findactive',
-//			       name:'Activejump',
-//			       component: Activejump
-//			   },{
-//			   	   path: '/FindCar/Findactive/Findactivechild',
-//			       name:'Findactivechild',
-//			       component: Findactivechild,
-//			     }      
-//			   ]
+			   component: Findactive
 			 },{
 			   path: '/FindCar/Findactive2',
 			   name:'Findactive2',
@@ -157,6 +143,11 @@ const routes = [
 		path: '/Brand',
 		name: 'Brand',
 		component:Brand
+	},{
+		path: '/Detail/:serieName:brandName:priceScope',
+		name:'Detail',
+	  	component: Detail
+	  	
 	},
 	{//设置
 		path: '/MyCar/MyCarset',
@@ -216,7 +207,11 @@ const routes = [
 		name:'myCarCenter',
 		component: myCarCenter
 	}]
-
+	},
+	{//选择城市
+		path: '/NewCar/selectCity',
+		name:'selectCity',
+		component: selectCity
 	}
 ]
 const router = new VueRouter({

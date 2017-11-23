@@ -38,7 +38,7 @@
 			<v-scroll :on-refresh="onRefresh" :on-infinite="onInfinite">
 				<ul class="second_list">
 					<li v-for="data in datalist">
-						<router-link :to="{name:'Detail',params:{seriesRecordId:data.seriesRecordId}}">
+						<router-link :to="{name:'Detail',params:{serieName:data.serieName,brandName:data.brandName,priceScope:data.priceScope}}">
 							<img :src='data.imgLogo' />
 							<div class="second_instro">
 								<h3>{{data.serieName}}</h3>
@@ -135,7 +135,6 @@
 					}
 				}).then((data)=>{
 					this.datalist = data.data.showapi_res_body.data.slice(0,15);
-					console.log(data.data.showapi_res_body.data)
 				})
 			},
 		    onRefresh(done) {
