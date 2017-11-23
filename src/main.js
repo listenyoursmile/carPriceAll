@@ -74,7 +74,11 @@ import Findactive2 from './components/FindCarye/Findactive2'
 import selectCity from './components/NewCar/selectCity'
 import selectCar from './components/NewCar/selectCar'
 import newLoan from './components/NewCar/newLoan'
-
+import newHot from './components/NewCar/newHot'
+import newHot_this from './components/NewCar/newHot_this'
+import newHot_cus from './components/NewCar/newHot_cus'
+import newConsider from './components/NewCar/newConsider'
+import newInfo from './components/NewCar/newInfo'
 
 var zepto = require('n-zepto');
 
@@ -242,6 +246,33 @@ const routes = [
 		path: '/NewCar/newLoan',
 		name:'newLoan',
 		component: newLoan
+	},
+	{//本期爆款
+		path: '/NewCar/newHot',
+		name:'newHot',
+		component: newHot,
+		children:[
+			{
+				path: '/NewCar/newHot',
+				name:'newHot_this',
+			  	component: newHot_this
+			},
+			{
+				path: '/NewCar/newHot_cus',
+				name:'newHot_cus',
+			  	component: newHot_cus
+			}
+		]
+	},
+	{//销量排行
+		path: '/NewCar/newConsider',
+		name:'newConsider',
+		component: newConsider
+	},
+	{//汽车资讯
+		path: '/NewCar/newInfo',
+		name:'newInfo',
+		component: newInfo
 	}
 ]
 const router = new VueRouter({
