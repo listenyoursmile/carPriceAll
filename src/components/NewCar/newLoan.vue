@@ -57,6 +57,7 @@
 		    	<li><div>无信用记录</div></li>
 		    </ul>
 		</div>
+		<input type="button" name="selectLoan" value="完成，选择贷款车款" />
 	</div>
 </template>
 
@@ -124,8 +125,6 @@
 		font-weight: bold;
 		margin-top: 0.17rem;
 	}
-	.new_loan_box ul{
-	}
 	.new_loan_box ul li{
 		font-size: 0.34rem;
 		float: left;
@@ -138,11 +137,21 @@
 		background-clip: padding-box;
 		line-height: 1.03rem;
 		margin-right: 2%;
-		margin-bottom: 0.3rem;
+		margin-bottom: 0.2rem;
 	}
 	.new_loan_box ul .new_loan_sel{
 		background: #edf5ff;
 		border:1px solid  #1d88eb;
 		color: #1e88eb;
+	}
+	.new_newLoan>input{
+		width: 90%;
+		margin: 1rem 5% 1rem;
+		height: 1rem;
+		line-height: 1rem;
+		background: #1d88eb;
+		color: #fff;
+		border: none;
+		border-radius: 3px;
 	}
 </style>

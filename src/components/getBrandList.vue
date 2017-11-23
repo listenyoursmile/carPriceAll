@@ -117,6 +117,7 @@
 		float: left;
 	}
 	.shapeOutside{
+		display: none;
 		float: right;
 		width: 20vw;
 		height: 30%;

@@ -31,12 +31,16 @@
 					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-xiaoliangpaixing"></i>
-					<span>销量排行</span>
+					<router-link to="/NewCar/newConsider">
+						<i class="iconfont icon-xiaoliangpaixing"></i>
+						<span>销量排行</span>
+					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-zixun"></i>
-					<span>汽车资讯</span>
+					<router-link to="/NewCar/newInfo">
+						<i class="iconfont icon-zixun"></i>
+						<span>汽车资讯</span>
+					</router-link>
 				</li>
 				<li>
 					<router-link to="/NewCar/newLoan">
@@ -45,8 +49,10 @@
 					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-fengqiangbaokuan"></i>
-					<span>今日疯抢</span>
+					<router-link to="/NewCar/newHot">
+						<i class="iconfont icon-fengqiangbaokuan"></i>
+						<span>今日疯抢</span>
+					</router-link>
 				</li>
 			</ul>
 			<p><img src="../assets/images/new_nav1.png"/><span>导购</span>领克01亮相广州车展</p>
