@@ -1,5 +1,16 @@
 <template>
 	<div>
+		<router-view></router-view>	  
+	</div>
+</template>
+
+<script>
+</script>
+
+<style>
+</style>
+<!--<template>
+	<div>
 		<x-header class="carimg">游戏广场</x-header>
 		<ul class="active-list">
 			<li>
@@ -45,4 +56,4 @@
 	.active-list li p{background: #fff;height:0.8rem;line-height: 0.8rem;text-indent: 2%;color: #cdcdcd;}
 	.active-list li:first-child{padding: 0;}
 	
-</style>
+</style>-->

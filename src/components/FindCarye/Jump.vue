@@ -52,8 +52,10 @@
 				       	   </li>
 				       	   
 				       	    <li>
+				       	    	<router-link to="FindCar/JiangJia">
 				       	   	    <b><img src="../../assets/images/findcar/f8.png"/></b>
 				       	   	   <i>降价排行</i>
+				       	   	   </router-link>
 				       	   </li>
 				       	   <li>
 				       	   	    <b><img src="../../assets/images/findcar/f9.png"/></b>
@@ -179,19 +181,25 @@
 	    	<p>猜你喜欢</p>
 	    	<ul class="like_choose">
 				 <li>
+				 	<router-link to="/FindCar/Zhinan">
 				     <img src="../../assets/images/findcar/24.png"/>
 				     <i>手机支架</i>
 				     <b>35</b>
+				     </router-link>
 				 </li>
 				 <li>
+				 	<router-link to="/FindCar/Zhinan">
 				     <img src="../../assets/images/findcar/25.png"/>
 				     <i>手机支架</i>
 				     <b>35</b>
+				     </router-link>
 				 </li>     
 				<li>
+					<router-link to="/FindCar/Zhinan">
 				     <img src="../../assets/images/findcar/26.png"/>
 				     <i>手机支架</i>
 				     <b>35</b>
+				     </router-link>
 				 </li>  
 				
 			</ul>

@@ -71,8 +71,8 @@ import Jump3 from './components/FindCarye/Jump3'
 import Findactive from './components/FindCarye/Findactive'
 import Findactive2 from './components/FindCarye/Findactive2'
 import Benchi from './components/FindCarye/Benchi'
-
-
+import JiangJia from './components/FindCarye/JiangJia'
+import Zhinan from './components/FindCarye/Zhinan'
 
 var zepto = require('n-zepto');
 
@@ -152,6 +152,14 @@ const routes = [
 			 	path:'/FindCar/Benchi',
 			 	name:'Benchi',
 			 	component:Benchi
+			 },{
+			 	path:'/FindCar/JiangJia',
+			 	name:'JiangJia',
+			 	component:JiangJia
+			 },{
+			 	path:'/FindCar/Zhinan',
+			 	name:'Zhinan',
+			 	component:Zhinan
 			 }
 			]
 			
