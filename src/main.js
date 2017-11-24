@@ -136,19 +136,7 @@ const routes = [
 			   path: '/FindCar/Findactive2',
 			   name:'Findactive2',
 			   component: Findactive2,
-			   children:[
-				   {
-				   		path: '/FindCar/Findactive',
-					   	name:'Jump3',
-					   	component: Jump3
-				   },
-				   {
-				   	   path:'/Findactive/Findactivechild',
-				       name:'Findactivechild',
-				       component: Findactivechild
-				   }
-			 ]
-			 },{
+			   			 },{
 			 	path:'/FindCar/Benchi',
 			 	name:'Benchi',
 			 	component:Benchi

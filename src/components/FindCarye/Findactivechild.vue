@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<x-header class="carimg">游戏广场</x-header>
-		<p><img src="../../assets/images/findcar/child1.png" alt="" /></p>
+		<p><img src="../../../static/images/findcar/child1.png" alt="" /></p>
 	</div>
 </template>
 
@@ -22,7 +22,7 @@
 </script>
 
 <style>
-	.carimg{background: url(../../assets/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
+	.carimg{background: url(../../../static/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
 	}
 	
 	p{width: 100%;height: 100%;margin: 0;padding: 0;}

@@ -4,19 +4,19 @@
 		<ul class="active-list">
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa7.png"/></b>
+				<b><img src="../../../static/images/findcar/fa7.png"/></b>
 			    <p>活动</p>
 			     </router-link>
 			</li>
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa8.png"/></b>
+				<b><img src="../../../static/images/findcar/fa8.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa9.png"/></b>
+				<b><img src="../../../static/images/findcar/fa9.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
@@ -42,7 +42,7 @@
 </script>
 
 <style>
-	.carimg{background: url(../../assets/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
+	.carimg{background: url(../../../static/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
 	}
 	.active-list{width: 100%;overflow: hidden;}
 	.active-list li{background: #f5f5f5;padding-top: 0.1rem;}

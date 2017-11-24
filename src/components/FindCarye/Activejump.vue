@@ -3,27 +3,27 @@
 		<router-link to="/FindCar/Findactive2">
 		<ul class="active-list">
 			<li>
-				<b><img src="../../assets/images/findcar/fa1.png"/></b>
+				<b><img src="../../../static/images/findcar/fa1.png"/></b>
 			    <p>活动</p>
 			</li>
 			<li>
-				<b><img src="../../assets/images/findcar/fa2.png"/></b>
+				<b><img src="../../../static/images/findcar/fa2.png"/></b>
 			    <p>活动2</p>
 			</li>
 			<li>
-				<b><img src="../../assets/images/findcar/fa3.png"/></b>
+				<b><img src="../../../static/images/findcar/fa3.png"/></b>
 			    <p>活动2</p>
 			</li>
 			<li>
-				<b><img src="../../assets/images/findcar/fa4.png"/></b>
+				<b><img src="../../../static/images/findcar/fa4.png"/></b>
 			    <p>活动2</p>
 			</li>
 			<li>
-				<b><img src="../../assets/images/findcar/fa5.png"/></b>
+				<b><img src="../../../static/images/findcar/fa5.png"/></b>
 			    <p>活动2</p>
 			</li>
 			<li>
-				<b><img src="../../assets/images/findcar/fa6.png"/></b>
+				<b><img src="../../../static/images/findcar/fa6.png"/></b>
 			    <p>活动2</p>
 			</li>
 		</ul>

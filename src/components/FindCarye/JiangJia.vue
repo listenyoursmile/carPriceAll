@@ -1,6 +1,12 @@
 <template>
 	<div>
 		 <x-header class="carimg">降价排行</x-header>
+		 <div>
+		 	<ul class="jiangbtn">
+		 		<li>品牌</li>
+		 	    <li @click="listchange()">降价排行</li>
+		 	</ul>
+		 </div>
 		<div>
 			<ul>
 				<li v-for="data in pricelist" class="cars">
@@ -39,20 +45,39 @@
 	    		data.data.map((data,index)=>{
 //	    			console.log(data)
 	    			data.map((data,index)=>{
-	    				console.log(data)
+//	    				console.log(data)
 	    				this.pricelist.push(data);
+	    					
 	    			})
 	    		})
 	    		
 	    		
 	    	})
 	    	
-	    },
-	    
-	    
-		methods:{
-			
-			
+	    },   
+		methods:{	
+			listchange(){
+				var data = this.pricelist;
+				var lengths=data.length
+				for(var i=0;i<lengths-1;i++){ 					
+	    				for(var j=0;j<lengths-i-1;j++){
+								if(JSON.parse(data[j].price)>JSON.parse(data[j+1].price)){
+									var that=data[j];
+									    data[j]=data[j+1];
+									    data[j+1]=that;
+								}
+	    				}	
+	    			
+	    	}
+
+			  this.pricelist = data
+				var i=[];
+				this.pricelist.forEach(function(v){
+					i.push(v)
+				})
+//				console.log(i.price)
+				this.pricelist=i;	
+			}		
 		}
 	}
 </script>
@@ -60,7 +85,12 @@
 <style>		
 	.carimg{background: url(../../assets/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
 	}
-   .cars{width: 100%;overflow: hidden;border-bottom: 1px solid #ccc;padding: 4px 0;}
+	/*降价*/
+	.jiangbtn{width:100%;display: flex;border-bottom: 1px solid #ccc;width: 80%;padding: 4px 10%;}
+	.jiangbtn li{border:1px solid #ccc;font-size: 0.3rem;border-radius: 5px;margin:4px;padding: 4px;}
+	
+	
+   .cars{width:80%;overflow: hidden;border-bottom: 1px solid #ccc;padding: 4px 10%;}
    /*.cars b{width: 10%;float: left;line-height: 2rem;height: 2rem;}*/
    .cars i{float: left;height: 2rem;width: 30%;}
    .cars i img{height: 2rem;}

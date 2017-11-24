@@ -7,38 +7,38 @@
 			
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-					<b><img src="../../assets/images/findcar/fa1.png"/></b>
+					<b><img src="../../../static/images/findcar/fa1.png"/></b>
 				    <p>活动</p>
 			    </router-link>
 			</li>
 			
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa2.png"/></b>
+				<b><img src="../../../static/images/findcar/fa2.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa3.png"/></b>
+				<b><img src="../../../static/images/findcar/fa3.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa4.png"/></b>
+				<b><img src="../../../static/images/findcar/fa4.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa5.png"/></b>
+				<b><img src="../../../static/images/findcar/fa5.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
 			<li>
 				<router-link to="/Findactive/Findactivechild">
-				<b><img src="../../assets/images/findcar/fa6.png"/></b>
+				<b><img src="../../../static/images/findcar/fa6.png"/></b>
 			    <p>活动2</p>
 			     </router-link>
 			</li>
@@ -66,7 +66,7 @@
 </script>
 
 <style>		
-	.carimg{background: url(../../assets/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
+	.carimg{background: url(../../../static/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
 	}
     .active-list{width: 100%;overflow: hidden;}
 	.active-list li{background: #f5f5f5;padding-top: 0.1rem;}
