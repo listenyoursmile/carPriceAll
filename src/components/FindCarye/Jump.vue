@@ -1,17 +1,13 @@
 <template>
 	<div>
-		<Headers>
-			<div slot="headers">
-			
-				<div class="new_hs_right"><p style="line-height: 1.5rem;font-size: 0.5rem;font-weight: bold;padding-right: 1.5rem;">二手车</p></div>
-			</div>
-		</Headers>
+		 <x-header class="carimg">指南者</x-header>	
+		
 	   
-		<p class="top_photo"><img src="../../assets/images/findcar/f1.jpg" /></p>
+		<p class="top_photo"><img src="../../../static/images/findcar/f1.jpg" /></p>
 		<div class="find_huo">
 			<router-link to="/FindCar/Findactive">
 				<div class="huo_tital huo_one">
-					<img src="../../assets/images/findcar/f2.png"/>
+					<img src="../../../static/images/findcar/f2.png"/>
 					<p>
 						<b>活动专区</b>
 					    <i>豪送5万元京东卡</i>
@@ -20,7 +16,7 @@
 		   </router-link>
 		   <router-link to="/FindCar/Findactive2">
 				<div class="huo_tital">
-					<img src="../../assets/images/findcar/f3.jpg" alt="" />
+					<img src="../../../static/images/findcar/f3.jpg" alt="" />
 					<p>
 						 <b>游戏广场</b>
 					    <i>我是车手决战巅峰</i>
@@ -35,36 +31,38 @@
 				<swiper-slide>
 				       <ul class="find_choose">
 				       	   <li>
-				       	   	   <b><img src="../../assets/images/findcar/f4.png"/></b>
+				       	   	   <b><img src="../../../static/images/findcar/f4.png"/></b>
 				       	   	   <i>车型对比</i>
 				       	   </li>
 				       	   <li>
-				       	   	     <b><img src="../../assets/images/findcar/f5.png"/></b>
+				       	   	     <b><img src="../../../static/images/findcar/f5.png"/></b>
 				       	   	    <i>购车计算器</i>
 				       	   </li>
 				       	   <li>
-				       	    	 <b><img src="../../assets/images/findcar/f6.png"/></b>
+				       	    	 <b><img src="../../../static/images/findcar/f6.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				       	   <li>
-				       	   	  <b><img src="../../assets/images/findcar/f7.png"/></b>
+				       	   	  <b><img src="../../../static/images/findcar/f7.png"/></b>
 				       	   	    <i>查违章</i>
 				       	   </li>
 				       	   
 				       	    <li>
-				       	   	    <b><img src="../../assets/images/findcar/f8.png"/></b>
+				       	    	<router-link to="FindCar/JiangJia">
+				       	   	    <b><img src="../../../static/images/findcar/f8.png"/></b>
 				       	   	   <i>降价排行</i>
+				       	   	   </router-link>
 				       	   </li>
 				       	   <li>
-				       	   	    <b><img src="../../assets/images/findcar/f9.png"/></b>
+				       	   	    <b><img src="../../../static/images/findcar/f9.png"/></b>
 				       	   	   <i>精彩视频</i>
 				       	   </li>
 				       	   <li>
-				       	   	   <b><img src="../../assets/images/findcar/f10.png"/></b>
+				       	   	   <b><img src="../../../static/images/findcar/f10.png"/></b>
 				       	   	   <i>摇号查询</i>
 				       	   </li>
 				       	   <li>
-				       	   	   <b><img src="../../assets/images/findcar/f11.png"/></b>
+				       	   	   <b><img src="../../../static/images/findcar/f11.png"/></b>
 				       	   	   <i>上市新车</i>
 				       	   </li>
 				       </ul>
@@ -83,19 +81,19 @@
 				<swiper-slide>
 					   <ul class="find_choose">
 				       	   <li>
-				       	   	     <b><img src="../../assets/images/findcar/f12.png"/></b>
+				       	   	     <b><img src="../../../static/images/findcar/f12.png"/></b>
 				       	   	   <i>车型对比</i>
 				       	   </li>
 				       	   <li>
-				       	   	     <b><img src="../../assets/images/findcar/f13.png"/></b>
+				       	   	     <b><img src="../../../static/images/findcar/f13.png"/></b>
 				       	   	    <i>购车计算器</i>
 				       	   </li>
 				       	   <li>
-				       	    	  <b><img src="../../assets/images/findcar/f14.png"/></b>
+				       	    	  <b><img src="../../../static/images/findcar/f14.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				       	   <li>
-				       	    	  <b><img src="../../assets/images/findcar/f15.png"/></b>
+				       	    	  <b><img src="../../../static/images/findcar/f15.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				     </ul>              
@@ -106,44 +104,46 @@
 		</div>
 		<div class="find_server">
 			<p>买车服务</p>
-			<div class="server_title">
-				<img src="../../assets/images/findcar/28.png"/>
-				<p>
-					<i>奔驰汽车</i>
-					<i>值得拥有</i>
-				</p>
-			</div>
+			<router-link to="/FindCar/Benchi">
+				<div class="server_title">
+					<img src="../../../static/images/findcar/28.png"/>
+					<p>
+						<i>奔驰汽车</i>
+						<i>值得拥有</i>
+					</p>
+				</div>
+			</router-link>	
 		    <ul class="server_choose">
 				       	   <li>
-				       	   	   <b><img src="../../assets/images/findcar/f12.png"/></b>
+				       	   	   <b><img src="../../../static/images/findcar/f12.png"/></b>
 				       	   	   <i>车型对比</i>
 				       	   </li>
 				       	   <li>
-				       	   	   <b><img src="../../assets/images/findcar/f13.png"/></b>
+				       	   	   <b><img src="../../../static/images/findcar/f13.png"/></b>
 				       	   	    <i>购车计算器</i>
 				       	   </li>
 				       	   <li>
-				       	    	 <b><img src="../../assets/images/findcar/f14.png"/></b>
+				       	    	 <b><img src="../../../static/images/findcar/f14.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				       	   <li>
-				       	    	<b><img src="../../assets/images/findcar/f15.png"/></b>
+				       	    	<b><img src="../../../static/images/findcar/f15.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				       	   <li>
-				       	   	  <b><img src="../../assets/images/findcar/f16.png"/></b>
+				       	   	  <b><img src="../../../static/images/findcar/f16.png"/></b>
 				       	   	   <i>车型对比</i>
 				       	   </li>
 				       	   <li>
-				       	   	    <b><img src="../../assets/images/findcar/f17.png"/></b>
+				       	   	    <b><img src="../../../static/images/findcar/f17.png"/></b>
 				       	   	    <i>购车计算器</i>
 				       	   </li>
 				       	   <li>
-				       	    	 <b><img src="../../assets/images/findcar/f18.png"/></b> 
+				       	    	 <b><img src="../../../static/images/findcar/f18.png"/></b> 
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 				       	   <li>
-				       	    	 <b><img src="../../assets/images/findcar/f19.png"/></b>
+				       	    	 <b><img src="../../../static/images/findcar/f19.png"/></b>
 				       	   	    <i>二手车估价</i>
 				       	   </li>
 			</ul>
@@ -153,22 +153,22 @@
 	    	  <p>汽车用品</p>
 	    	  <ul class="yong_choose">
 				       	   <li>
-				       	   	   <em><img src="../../assets/images/findcar/20.png"/></em>
+				       	   	   <em><img src="../../../static/images/findcar/20.png"/></em>
 				       	   	   <i>手机支架</i>
 				       	   	   <b>35</b>
 				       	   </li>
 				       	  <li>
-				       	   	   <em><img src="../../assets/images/findcar/21.png"/></em>
+				       	   	   <em><img src="../../../static/images/findcar/21.png"/></em>
 				       	   	   <i>手机支架</i>
 				       	   	   <b>35</b>
 				       	   </li>
 				       	   <li>
-				       	   	  <em><img src="../../assets/images/findcar/f22.png"/></em>
+				       	   	  <em><img src="../../../static/images/findcar/f22.png"/></em>
 				       	   	   <i>手机支架</i>
 				       	   	   <b>35</b>
 				       	   </li>
 				       	   <li>
-				       	   	   <em><img src="../../assets/images/findcar/23.png"/></em>			       
+				       	   	   <em><img src="../../../static/images/findcar/23.png"/></em>			       
 				       	   </li>
 			 </ul>
 		   <strong></strong>
@@ -177,19 +177,25 @@
 	    	<p>猜你喜欢</p>
 	    	<ul class="like_choose">
 				 <li>
-				     <img src="../../assets/images/findcar/24.png"/>
+				 	<router-link to="/FindCar/Zhinan">
+				     <img src="../../../static/images/findcar/24.png"/>
 				     <i>手机支架</i>
 				     <b>35</b>
+				     </router-link>
 				 </li>
 				 <li>
-				     <img src="../../assets/images/findcar/25.png"/>
+				 	<router-link to="/FindCar/Zhinan">
+				     <img src="../../../static/images/findcar/25.png"/>
 				     <i>手机支架</i>
 				     <b>35</b>
+				     </router-link>
 				 </li>     
 				<li>
-				     <img src="../../assets/images/findcar/26.png"/>
+					<router-link to="/FindCar/Zhinan">
+				     <img src="../../../static/images/findcar/26.png"/>
 				     <i>手机支架</i>
 				     <b>35</b>
+				     </router-link>
 				 </li>  
 				
 			</ul>
@@ -215,12 +221,14 @@
 	
 </script>
 <style>
-	.headers{opacity: 1 !important;z-index: 10;top:0;}
+   .carimg{background: url(../../../static/images/header-bg.jpg);background-size:cover;height: 1.5rem;overflow: hidden;
+	}
+	/*.headers{opacity: 1 !important;z-index: 10;top:0;}*/
 	/*头部*/
-	.top_photo{height:3.2rem;width: 100%;overflow: hidden;margin-top: 1.5rem;}
+	.top_photo{height:3.2rem;width: 98%;overflow: hidden;margin-top: 1.5rem;margin: 0 auto;}
 	.top_photo img{height:3.2rem;width: 100%;}
-	.find_huo{width: 95%;background: #f6f6f6;overflow: hidden;font-size: 0.2rem;overflow: hidden;padding-left: 5%;}
-	.find_huo .huo_tital{width:45%;float: left;background: #fff;height: 2rem;overflow: hidden;}
+	.find_huo{width: 90%;background: #f6f6f6;overflow: hidden;font-size: 0.2rem;overflow: hidden;padding-left: 5%;}
+	.find_huo .huo_tital{width:40%;float: left;background: #fff;height: 2rem;overflow: hidden;}
 	.find_huo .huo_tital img{width: 30%;float: left;margin-right: 4px;margin-top:5%;}
 	.find_huo .huo_tital p{float:left;width: 50%;}
 	.find_huo .huo_tital p b{display: block;margin-top:15%;}
@@ -228,8 +236,8 @@
 	
 	.find_huo .huo_one{margin-right:4%;}
 	/*选项卡轮播*/
-    /*.find_luobo{height:7.5rem;}*/
-    .find_luobo p{height:1rem;line-height: 1rem;font-size: 0.3rem;font-weight: bold;padding: 0 5%;}
+    .find_luobo{overflow: hidden;}
+    .find_luobo p{height:1rem;line-height: 1rem;font-size: 0.3rem;font-weight: bold;}
     /*.find_luobo grid-item img{width: 100%;height:0.5rem;}*/
     /*.grid-center{display: block;text-align: center;color: #666;}*/
     .find_choose{width: 100%;display: flex;flex-wrap:wrap;}

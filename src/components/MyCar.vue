@@ -5,7 +5,7 @@
 	<div class="cartop">
 		<img src="../assets/images/mycar/1.jpg" v-bind:class="{macarimg:isTrue}" @click="goLanding"/>
 		<div v-bind:class="{macaruser:isUser}" class="macarus" @click="myCarCenter">
-			<img src="../assets/images/mycar/2.jpg" class="mycarportrait"/>
+			<img src="../../static/images/mycar/2.jpg" class="mycarportrait"/>
 			<p>{{myCarname}}<br/>{{myCarautograph}}</p><span style="float: right;margin-top: 0.6rem;color: #eef6fe;">></span>
 		</div>
 	</div>

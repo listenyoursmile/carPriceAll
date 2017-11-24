@@ -1,7 +1,7 @@
 <template><div id="">
 	<x-header class="MycarCommunity"></x-header>
 	<div class="myCommunity">
-		<img src="../../assets/images/mycar/2.jpg"/>
+		<img src="../../../static/images/mycar/2.jpg"/>
 		<p>{{myCarname}}<br/><span style="font-size: 0.3rem;">{{myCarautograph}}</span></p>
 	</div>
 	<div style="display: flex;justify-content:space-around;flex-wrap: nowrap;height: 1.9rem;font-size: 0.45rem;text-align: center;">

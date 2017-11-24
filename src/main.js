@@ -69,7 +69,11 @@ import {AjaxPlugin} from 'vux'
 
 
 //发现车
+
+import Findactivechild from './components/FindCarye/Findactivechild'
 import Jump from './components/FindCarye/Jump'
+import Jump2 from './components/FindCarye/Jump2'
+import Jump3 from './components/FindCarye/Jump3'
 import Findactive from './components/FindCarye/Findactive'
 import Findactive2 from './components/FindCarye/Findactive2'
 
@@ -82,6 +86,9 @@ import newHot_this from './components/NewCar/newHot_this'
 import newHot_cus from './components/NewCar/newHot_cus'
 import newConsider from './components/NewCar/newConsider'
 import newInfo from './components/NewCar/newInfo'
+import Benchi from './components/FindCarye/Benchi'
+import JiangJia from './components/FindCarye/JiangJia'
+import Zhinan from './components/FindCarye/Zhinan'
 
 var zepto = require('n-zepto');
 
@@ -117,16 +124,40 @@ const routes = [
 			{
 			   path: '/FindCar',
 			   name:'Jump',
-			   component: Jump	
-			 },
-			 {
+			   component: Jump,
+			},
+			{
 			   path: '/FindCar/Findactive',
 			   name:'Findactive',
-			   component: Findactive
+			   component: Findactive,
+			   children:[
+				   {
+				   		path: '/FindCar/Findactive',
+					   	name:'Jump2',
+					   	component: Jump2
+				   },
+				   {
+				   	   path:'/Findactive/Findactivechild',
+				       name:'Findactivechild',
+				       component: Findactivechild
+				   }
+			   ]
 			 },{
 			   path: '/FindCar/Findactive2',
 			   name:'Findactive2',
-			   component: Findactive2	
+			   component: Findactive2,
+			   			 },{
+			 	path:'/FindCar/Benchi',
+			 	name:'Benchi',
+			 	component:Benchi
+			 },{
+			 	path:'/FindCar/JiangJia',
+			 	name:'JiangJia',
+			 	component:JiangJia
+			 },{
+			 	path:'/FindCar/Zhinan',
+			 	name:'Zhinan',
+			 	component:Zhinan
 			 }
 			]
 			

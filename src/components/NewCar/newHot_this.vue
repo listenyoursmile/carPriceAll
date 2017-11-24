@@ -2,9 +2,9 @@
 	<div class="new_newHot">
 	    	<div class="newHot_banner">
 				<swiper>
-					<swiper-slide><img src="../../assets/images/banner1.jpg" width="100%"/></swiper-slide>
-					<swiper-slide><img src="../../assets/images/banner2.jpg" width="100%"/></swiper-slide>
-					<swiper-slide><img src="../../assets/images/banner3.jpg" width="100%"/></swiper-slide>
+					<swiper-slide><img src="../../../static/images/banner1.jpg" width="100%"/></swiper-slide>
+					<swiper-slide><img src="../../../static/images/banner2.jpg" width="100%"/></swiper-slide>
+					<swiper-slide><img src="../../../static/images/banner3.jpg" width="100%"/></swiper-slide>
 				</swiper>
 			</div>
 			<div class="newHot_tit">

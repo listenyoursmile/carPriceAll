@@ -1,19 +1,24 @@
-
 <template>
 	<div>
 		<x-header class="carimg">游戏广场</x-header>
 		<ul class="active-list">
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../../static/images/findcar/fa7.png"/></b>
 			    <p>活动</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../../static/images/findcar/fa8.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			<li>
+				<router-link to="/Findactive/Findactivechild">
 				<b><img src="../../../static/images/findcar/fa9.png"/></b>
 			    <p>活动2</p>
+			     </router-link>
 			</li>
 			
 		</ul>
@@ -37,7 +42,8 @@
 </script>
 
 <style>
-	.carimg{background: url(../../../static/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;}
+	.carimg{background: url(../../../static/images/header-bg.jpg));background-size:cover;height: 1.5rem;overflow: hidden;
+	}
 	.active-list{width: 100%;overflow: hidden;}
 	.active-list li{background: #f5f5f5;padding-top: 0.1rem;}
 	.active-list li b{width: 100%;display: block;}

@@ -28,9 +28,9 @@
 		
 		<div class="new_banner">
 			<swiper>
-				<swiper-slide><img src="../assets/images/banner1.jpg" width="100%"/></swiper-slide>
-				<swiper-slide><img src="../assets/images/banner2.jpg" width="100%"/></swiper-slide>
-				<swiper-slide><img src="../assets/images/banner3.jpg" width="100%"/></swiper-slide>
+				<swiper-slide><img src="../../static/images/banner1.jpg" width="100%"/></swiper-slide>
+				<swiper-slide><img src="../../static/images/banner2.jpg" width="100%"/></swiper-slide>
+				<swiper-slide><img src="../../static/images/banner3.jpg" width="100%"/></swiper-slide>
 				<div class="swoper-pagination"></div>
 			</swiper>
 		</div>
@@ -67,44 +67,44 @@
 					</router-link>
 				</li>
 			</ul>
-			<p><img src="../assets/images/new_nav1.png"/><span>导购</span>领克01亮相广州车展</p>
+			<p><img src="../../static/images/new_nav1.png"/><span>导购</span>领克01亮相广州车展</p>
 		</div>
 		<div class="new_recommend">
 			<p><i class="iconfont icon-like"></i>热门推荐</p>
 			<ul class="new_recommend_list1">
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/logo1.png"/>
+					<img src="../../static/images/newCar/logo1.png"/>
 					<p>斯柯达</p>
 				</router-link></li>
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/logo2.png"/>
+					<img src="../../static/images/newCar/logo2.png"/>
 					<p>斯柯达</p>
 				</router-link></li>
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/logo3.png"/>
+					<img src="../../static/images/newCar/logo3.png"/>
 					<p>斯柯达</p>
 				</router-link></li>
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/logo4.png"/>
+					<img src="../../static/images/newCar/logo4.png"/>
 					<p>斯柯达</p>
 				</router-link></li>
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/logo5.png"/>
+					<img src="../../static/images/newCar/logo5.png"/>
 					<p>斯柯达</p>
 				</router-link></li>
 				
 			</ul>
 			<ul class="new_recommend_list2">
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/car1.jpg"/>
+					<img src="../../static/images/newCar/car1.jpg"/>
 					<p>哈弗H6</p>
 				</router-link></li>
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/car1.jpg"/>
+					<img src="../../static/images/newCar/car1.jpg"/>
 					<p>锐界</p>
 				</router-link></li>
 				<li><router-link to="/">
-					<img src="../assets/images/newCar/car1.jpg"/>
+					<img src="../../static/images/newCar/car1.jpg"/>
 					<p>森雅R7</p>
 				</router-link></li>
 			</ul>
