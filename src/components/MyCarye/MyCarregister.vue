@@ -2,7 +2,8 @@
 	<div>
 		<x-header :left-options="{showBack: isTrue}" class="carimg">账号注册</x-header>
 		<div class="registerbut">
-			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的手机号" v-model="userID"/></li>
+			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的手机号  以13、14、15、17、18开头" v-model="pnumber"/></li>
+			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的用户名" v-model="userID"/></li>
 			<li style="border-bottom: 1px solid #ccc;"><input type="text" placeholder="请输入你的用密码" v-model="password"/></li>
 			<li><input type="text" placeholder="请输入你验证码" v-model="code" class="maycarcode"/><span v-text="codeclick" @click="codeclick1"></span></li>
 			<button @click="register" class="nycarclick">下一步</button>
@@ -19,6 +20,7 @@
 			return{
 				isTrue:true,
 				userID:'',
+				pnumber:'',
 				password:'',
 				code:'',
 				codeclick:'点击获取验证码'
@@ -48,26 +50,24 @@
 				this.codeclick =code;
 			},
 			register:function(){
-				if(this.userID==''){
-					alert("输入用户名")
+				if(this.pnumber==''){
+					alert("输入手机号")
 				}else{
-					if(this.password==''){
-						alert("输入密码")
+					if(this.password==''&&$state.userID==''){
+						alert("输入个人信息")
 					}else{
-						if(this.code==''||this.code!=this.codeclick){
+						let req = /^1[3|4|5|7|8][0-9]\d{4,8}$/
+						if(req.test(this.pnumber)==true){
+							if(this.code==''||this.code!=this.codeclick){
 							alert('请输入正确验证码')
+							}else{
+								this.$router.push({name:'MyCar'})
+								this.$store.commit('changeLogin','100')
+								this.$store.state.userID=this.userID
+							}	
 						}else{
-							this.$http({
-							method:'post',
-				    		url:"http://datainfo.duapp.com/shopdata/userinfo.php",
-				    		data:{status:'register',userID:this.userID,password:this.password}
-							}).then((data)=>{
-								console.log(data)
-								alert("注册成功")
-							  			this.$router.push({path:"/MyCar/MyCarlanding"})
-							   	})	
+						alert('请输入正确的手机号')
 						}
-						
 					}
 				}
 			}

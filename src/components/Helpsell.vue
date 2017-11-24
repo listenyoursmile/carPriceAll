@@ -32,7 +32,7 @@
 	}
 	.helpsell_content{
 		height:100%;
-		background:url(../assets/images/helpsell.png) no-repeat center 1.4rem;
+		background:url(../../static/images/helpsell.png) no-repeat center 1.4rem;
 		background-size: 100%;
 	}
 </style>

@@ -9,14 +9,14 @@
 		  <div class="second_contentbox">
 			<div class="nav">
 			    <router-link class="nav_left" to="/Helpbuys">
-					<img src="../assets/images/secondcar-1.png"/>
+					<img src="../../static/images/secondcar-1.png"/>
 					<div>
 						<h3>帮买二手车</h3>
 						<p>专家陪伴购车</p>
 					</div>
 			    </router-link>
 			    <router-link class="nav_right" to="/Helpsell"> 
-					<img src="../assets/images/secondcar-2.png"/>
+					<img src="../../static/images/secondcar-2.png"/>
 					<div>
 						<h3>帮您卖车</h3>
 						<p>上门估车卖高价</p>
@@ -83,7 +83,7 @@
 		name:'SecondCar',
 		components:{
 			Headers,XHeader,
-			'v-scroll': Scol
+			'v-scroll': Scol       
 		},
 		data(){
 			return {

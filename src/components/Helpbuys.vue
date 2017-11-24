@@ -6,7 +6,7 @@
 		</x-header>
 		<div class="helpcar_content">
 			<div class="helpcar_banner">
-				<img src="../assets/images/helpcar-1.png"/>
+				<img src="../../static/images/helpcar-1.png"/>
 			</div>
 			<swiper :list="demo03_list" auto style="width:100%;margin:0 auto;" height="82px" dots-class="custom-bottom" dots-position="center" link='/'></swiper>
 			<div class="helpprocess">
@@ -14,28 +14,28 @@
 				<ul class="helpstep">
 					<li>
 						<div>
-							<img src="../assets/images/helpcar-2.png" />
+							<img src="../../static/images/helpcar-2.png" />
 							<p>提交需求</p>
 						</div>
 					</li>
-					<li><img src="../assets/images/helpcar-6.png"/></li>
+					<li><img src="../../static/images/helpcar-6.png"/></li>
 					<li>
 						<div>
-							<img src="../assets/images/helpcar-2.png" />
+							<img src="../../static/images/helpcar-2.png" />
 							<p>带您看车</p>
 						</div>
 					</li>
-					<li><img src="../assets/images/helpcar-6.png"/></li>
+					<li><img src="../../static/images/helpcar-6.png"/></li>
 					<li>
 						<div>
-							<img src="../assets/images/helpcar-2.png" />
+							<img src="../../static/images/helpcar-2.png" />
 							<p>专家检测</p>
 						</div>
 					</li>
-					<li><img src="../assets/images/helpcar-6.png"/></li>
+					<li><img src="../../static/images/helpcar-6.png"/></li>
 					<li>
 						<div>
-							<img src="../assets/images/helpcar-2.png" />
+							<img src="../../static/images/helpcar-2.png" />
 							<p>付款提车</p>
 						</div>
 					</li>

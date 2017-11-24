@@ -24,23 +24,23 @@
 		</div>
 		<ul class="helpcar_nav"">
 			<li>
-				<img src="../assets/images/sq-4.png" />
+				<img src="../../static/images/sq-4.png" />
 				<h3>直播</h3>
 			</li>
 			<li>
-				<img src="../assets/images/sq-5.png" />
+				<img src="../../static/images/sq-5.png" />
 				<h3>专栏</h3>
 			</li>
 			<li>
-				<img src="../assets/images/sq-1.png" />
+				<img src="../../static/images/sq-1.png" />
 				<h3>话题</h3>
 			</li>
 			<li>
-				<img src="../assets/images/sq-2.png" />
+				<img src="../../static/images/sq-2.png" />
 				<h3>热门榜</h3>
 			</li>
 			<li>
-				<img src="../assets/images/sq-3.png" />
+				<img src="../../static/images/sq-3.png" />
 				<h3>鉴定</h3>
 			</li>
 		</ul>

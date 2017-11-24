@@ -27,8 +27,6 @@ import MyCar from './components/MyCar'
 import MyCarset from './components/MyCarye/MyCarset'
 import MyCarlanding from './components/MyCarye/MyCarlanding'
 import MyCarregisiter from './components/MyCarye/MyCarregister'
-
-
 import MycarCommunity from './components/MyCarye/MycarCommunity'
 import MycarSign from './components/MyCarye/MycarSign'
 import MycarShopping from './components/MyCarye/MycarShopping'
@@ -37,6 +35,8 @@ import MycarCollection from './components/MyCarye/MycarCollection'
 import MycarHistory from './components/MyCarye/MycarHistory'
 import Mycarfeedback from './components/MyCarye/Mycarfeedback'
 import myCarCenter from './components/MyCarye/myCarCenter'
+import myCarname1 from './components/MyCarye/myCarname'
+import myCarautog from './components/MyCarye/mycarautograph'
 	Vue.use(Vuex);
 
 	//使用vuex的Store状态仓库设置全局
@@ -44,13 +44,16 @@ import myCarCenter from './components/MyCarye/myCarCenter'
 		state:{
 	    	isLogin:0,//初始时候给一个  isLogin=0  表示用户未登录
 			userID:'',
-			myCarautograph:'没有任何签名'
+			myCarautograph:'没有任何签名',
+			mylevocar:'请选择',
+			autograph:'未填写',
+			mytime:'请设置',
+			address:"上海"
 		},
 		mutations:{
-	    changeLogin(state,data){
-	        state.isLogin = data;
-	        
-	    }
+		    changeLogin(state,data){
+		        state.isLogin = data;
+		    }
 		}
 	})
 /*                                     分界限                               */
@@ -72,13 +75,18 @@ import Findactive2 from './components/FindCarye/Findactive2'
 
 //NewCar
 import selectCity from './components/NewCar/selectCity'
-
+import selectCar from './components/NewCar/selectCar'
+import newLoan from './components/NewCar/newLoan'
+import newHot from './components/NewCar/newHot'
+import newHot_this from './components/NewCar/newHot_this'
+import newHot_cus from './components/NewCar/newHot_cus'
+import newConsider from './components/NewCar/newConsider'
+import newInfo from './components/NewCar/newInfo'
 
 var zepto = require('n-zepto');
 
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
-Vue.use(Vuex);
 Vue.use(zepto);
 
 
@@ -207,11 +215,59 @@ const routes = [
 		name:'myCarCenter',
 		component: myCarCenter
 	}]
+
+	},
+	{//修改昵称
+		path: '/MyCar/myCarCenter/myCarname',
+		name:'myCarname1',
+		component: myCarname1
+	},
+	{//修改个性签名
+		path: '/MyCar/myCarCenter/myCarautog',
+		name:'myCarautog',
+		component: myCarautog
 	},
 	{//选择城市
 		path: '/NewCar/selectCity',
 		name:'selectCity',
 		component: selectCity
+	},
+	{//条件选车
+		path: '/NewCar/selectCar',
+		name:'selectCar',
+		component: selectCar
+	},
+	{//贷款买车
+		path: '/NewCar/newLoan',
+		name:'newLoan',
+		component: newLoan
+	},
+	{//本期爆款
+		path: '/NewCar/newHot',
+		name:'newHot',
+		component: newHot,
+		children:[
+			{
+				path: '/NewCar/newHot',
+				name:'newHot_this',
+			  	component: newHot_this
+			},
+			{
+				path: '/NewCar/newHot_cus',
+				name:'newHot_cus',
+			  	component: newHot_cus
+			}
+		]
+	},
+	{//销量排行
+		path: '/NewCar/newConsider',
+		name:'newConsider',
+		component: newConsider
+	},
+	{//汽车资讯
+		path: '/NewCar/newInfo',
+		name:'newInfo',
+		component: newInfo
 	}
 ]
 const router = new VueRouter({

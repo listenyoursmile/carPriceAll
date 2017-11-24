@@ -120,6 +120,12 @@
 </script>
 
 <style scoped>
+	.icon-shoucang{
+		color: #666 !important;
+	}
+	.vux-header{
+		background-color: #fff;
+	}
 	table td{
 		padding-left: 0.5rem;
 		width:30%;

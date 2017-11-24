@@ -17,7 +17,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	.vux-header{
+		background-color: #fff;
+	}
 	.brand_empty{
 		height: 1.5rem;
 	}

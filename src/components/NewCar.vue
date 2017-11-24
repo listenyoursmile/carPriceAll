@@ -16,7 +16,7 @@
 			
 		</div>
 		<div class="new_header">
-					<router-link to="/NewCar/selectCity"><span class="new_hs_left">上海</span></router-link>
+					<router-link to="/NewCar/selectCity"><span class="new_hs_left">{{address}}</span></router-link>
 					<div class="new_hs_right">
 						<p class="new_ser">
 							<i class="iconfont icon-search"></i><span>名爵6</span>
@@ -37,24 +37,34 @@
 		<div class="new_nav clear">
 			<ul class="clear">
 				<li>
-					<i class="iconfont icon-cheliangxuanzhong"></i>
-					<span>条件宣传</span>
+					<router-link to="/NewCar/selectCar">
+						<i class="iconfont icon-cheliangxuanzhong"></i>
+						<span>条件选车</span>
+					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-xiaoliangpaixing"></i>
-					<span>销量排行</span>
+					<router-link to="/NewCar/newConsider">
+						<i class="iconfont icon-xiaoliangpaixing"></i>
+						<span>销量排行</span>
+					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-zixun"></i>
-					<span>汽车资讯</span>
+					<router-link to="/NewCar/newInfo">
+						<i class="iconfont icon-zixun"></i>
+						<span>汽车资讯</span>
+					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-chebiguize"></i>
-					<span>贷款买车</span>
+					<router-link to="/NewCar/newLoan">
+						<i class="iconfont icon-chebiguize"></i>
+						<span>贷款买车</span>
+					</router-link>
 				</li>
 				<li>
-					<i class="iconfont icon-fengqiangbaokuan"></i>
-					<span>今日疯抢</span>
+					<router-link to="/NewCar/newHot">
+						<i class="iconfont icon-fengqiangbaokuan"></i>
+						<span>今日疯抢</span>
+					</router-link>
 				</li>
 			</ul>
 			<p><img src="../assets/images/new_nav1.png"/><span>导购</span>领克01亮相广州车展</p>
@@ -120,7 +130,8 @@
 		},
 		data(){
 			return {
-				nh_datalist:[]
+				nh_datalist:[],
+				address:this.$store.state.address
 			}
 		},
 	    mounted(){
@@ -317,4 +328,4 @@
 		color: #666;
 	}
 </style>
->>>>>>> branch 'master' of https://github.com/listenyoursmile/carPriceAll.git
+
